@@ -2,58 +2,58 @@
 A single-page React application that simulates a customer rewards program for a retailer.
 
 # Feature
-Calculate reward points:
-    2 points for every $1 spent over $100
-    1 point for every $1 spent between $50 and $100
-Monthly reward points breakdown
-Transactions list with rewards per transaction
-Custom pagination for transactions list
-Total rewards per customer
-Implemented a loading spinner for a smoother and more seamless user experienceon API calls(Promises)
-Searching and sorting (asc|desc) on transaction records.
-Error boundaries for UI fallback
+Calculate reward points<br/>
+    2 points for every $1 spent over $100<br/>
+    1 point for every $1 spent between $50 and $100<br/>
+Monthly reward points breakdown<br/>
+Transactions list with rewards per transaction<br/>
+Custom pagination for transactions list<br/>
+Total rewards per customer<br/>
+Implemented a loading spinner for a smoother and more seamless user experienceon API calls(Promises)<br/>
+Searching and sorting (asc|desc) on transaction records<br/>
+Error boundaries for UI fallback<br/>
 
 # Installation
-git clone https://github.com/Sriprasanth8/customer-rewards.git
-cd customer-rewards
-npm i
-npm run dev
+git clone https://github.com/Sriprasanth8/customer-rewards.git<br/>
+cd customer-rewards<br/>
+npm i<br/>
+npm run dev<br/>
 
 # UI
-Build - React version(16+)
-Style - Bootstrap, CSS-module
-API - Axios (with Promise-based simulation)
-Testing - Manual Testing
+Build - React version(16+)<br/>
+Style - Bootstrap, CSS-module<br/>
+API - Axios (with Promise-based simulation)<br/>
+Testing - Manual Testing<br/>
 
 # Sample dataset
-I'm using Promises to simulate API calls.
-I have create a two sample JSON dataset for API response simulation.
+I'm using Promises to simulate API calls.<br/>
+I have create a two sample JSON dataset for API response simulation.<br/>
 
-Transaction API response
-[
-    transactionID : String,
-    customerId: String,
-    customerName: String,
-    purchaseDate: "yyyy-mm-dd",
-    product : String,
-    totalPrice : Number
-]
-
-Customer API response
-[
-  {
-    "customerId": Number,
-    "customerName": String,
-    "transactions": Array[
-      {
-        "transactionId": String,
-        "purchaseDate": "yyyy-mm-dd",
-        "products": Array[String],
-        "totalPrice": Number
-      }
-    ]
-  }
-]
+Transaction API response<br/>
+[<br/>
+    transactionID : String,<br/>
+    customerId: String,<br/>
+    customerName: String,<br/>
+    purchaseDate: "yyyy-mm-dd",<br/>
+    product : String,<br/>
+    totalPrice : Number<br/>
+]<br/>
+<br/>
+Customer API response<br/>
+[<br/>
+  {<br/>
+    "customerId": Number,<br/>
+    "customerName": String,<br/>
+    "transactions": Array[<br/>
+      {<br/>
+        "transactionId": String,<br/>
+        "purchaseDate": "yyyy-mm-dd",<br/>
+        "products": Array[String],<br/>
+        "totalPrice": Number<br/>
+      }<br/>
+    ]<br/>
+  }<br/>
+]<br/>
 
 # Author
 Prasanth Alagesan
