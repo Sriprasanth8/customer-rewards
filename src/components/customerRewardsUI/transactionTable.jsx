@@ -1,18 +1,20 @@
 
-import PropTypes, { string } from "prop-types";
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { useState } from "react";
 import { CustomSorting } from "../../utils/customSorting";
 import styles from "./customerReward.module.css";
+import { useDebounce } from "../../utils/debounce";
 
 
 const TransactionTable = (prop) => {
     const [sortConfig, setSortConfig] = useState({ key: "purchaseDate", direction: "desc" });
     const [searchProduct, setSearchProduct] = useState("");
+    const debounceValue = useDebounce(searchProduct, 500);
 
     var txn = prop.cusInfo.transactions;
 
     txn = txn?.filter(txn =>
-        txn.products.toString().toLowerCase().includes(searchProduct.toLowerCase())
+        txn.products.toString().toLowerCase().includes((debounceValue).toLowerCase())
     );
 
     txn = CustomSorting(txn, sortConfig);
@@ -30,7 +32,7 @@ const TransactionTable = (prop) => {
                         <tr>
                             <td >Transaction ID</td>
                             <td>Purchase Date
-                                <br></br>
+                                <br />
                                 <span className={`btn ${sortConfig.key === "purchaseDate" && sortConfig.direction === "asc" ? "text-success" : "text-white"}`}
                                     onClick={() => setSortConfig({ direction: "asc", key: "purchaseDate" })}>↑</span>
                                 <span className={`btn ${sortConfig.key === "purchaseDate" && sortConfig.direction === "desc" ? "text-success" : "text-white"}`}
@@ -47,7 +49,7 @@ const TransactionTable = (prop) => {
                             </td>
                             <td>Total Price</td>
                             <td>Rewards Point
-                                <br></br>
+                                <br />
                                 <span className={`btn ${sortConfig.key === "rewardPoints" && sortConfig.direction === "asc" ? "text-success" : "text-white"}`}
                                     onClick={() => setSortConfig({ direction: "asc", key: "rewardPoints" })}>↑</span>
                                 <span className={`btn ${sortConfig.key === "rewardPoints" && sortConfig.direction === "desc" ? "text-success" : "text-white"}`}
@@ -72,7 +74,7 @@ const TransactionTable = (prop) => {
     )
 }
 
-TransactionTable.prototype = {
+TransactionTable.propTypes = {
     transactionId: PropTypes.string.isRequired,
     purchaseDate: PropTypes.string.isRequired,
     products: PropTypes.arrayOf[PropTypes.string],
