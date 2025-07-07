@@ -12,7 +12,7 @@ const DashBoard = () => {
     const [selectedCustomerId, setSelectedCustomerId] = useState(0);
     const [searchName, setSearchName] = useState("");
     const [searchProduct, setSearchProduct] = useState("");
-    const [sortConfig, setSortConfig] = useState({ key: "", direction: "" });
+    const [sortConfig, setSortConfig] = useState({ key: "purchaseDate", direction: "desc" });
     const [toogle, setToogle] = useState(false);
     const itemsPerPage = 5;
 

@@ -6,7 +6,7 @@ import styles from "./customerReward.module.css";
 
 
 const TransactionTable = (prop) => {
-    const [sortConfig, setSortConfig] = useState({ key: "", direction: "" });
+    const [sortConfig, setSortConfig] = useState({ key: "purchaseDate", direction: "desc" });
     const [searchProduct, setSearchProduct] = useState("");
 
     var txn = prop.cusInfo.transactions;
