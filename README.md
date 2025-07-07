@@ -2,7 +2,7 @@
 A single-page React application that simulates a customer rewards program for a retailer.
 
 # Feature
-Calculate reward points:
+Calculate reward points:\n
     2 points for every $1 spent over $100
     1 point for every $1 spent between $50 and $100
 Monthly reward points breakdown
