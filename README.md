@@ -13,7 +13,7 @@ A single-page React application that simulates a customer rewards program for a 
 --Searching and sorting (asc|desc)
 
 # Installation
---git clone https://github.com/yourusername/react-rewards-app.git
+--git clone https://github.com/Sriprasanth8/customer-rewards.git
 --cd react-rewards-app
 --npm i
 --npm run dev
