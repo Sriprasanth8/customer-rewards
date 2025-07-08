@@ -59,11 +59,11 @@ const CustomerRewards = (prop) => {
                                             <p>Customer Name : <b className="text-success h3">{cusInfo.customerName}</b></p>
                                         </div>
                                     </div>
-                                    <div className="col-6 py-3 text-center border-right">
+                                    <div className="col-12 py-3 text-center border-right">
                                         <h3>Total Purchase</h3>
                                         <h2 className="text-primary">${parseFloat(cusInfo.totalRewardPoints.totalPurchase).toFixed(2)}</h2>
                                     </div>
-                                    <div className="col-6 py-3 text-center">
+                                    <div className="col-12 py-3 text-center">
                                         <h3>Total Rewards</h3>
                                         <h2 className="text-primary">{cusInfo.totalRewardPoints.totalReward}</h2>
                                     </div>

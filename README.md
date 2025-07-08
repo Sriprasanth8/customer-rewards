@@ -1,18 +1,19 @@
 # React + Vite
-A single-page React application that simulates a customer rewards program for a retailer.
+A **single-page** React application that simulates a **customer rewards** program for a retailer.
 
 # Feature
-Calculate reward points<br/>
-    2 points for every $1 spent over $100<br/>
-    1 point for every $1 spent between $50 and $100<br/>
-Monthly reward points breakdown<br/>
-Transactions list with rewards per transaction<br/>
-Implemented filter to retrieve timeline-based transaction data.<br/>
-Custom pagination for transactions list<br/>
-Total rewards per customer<br/>
-Implemented a loading spinner for a smoother and more seamless user experienceon API calls(Promises)<br/>
-Searching and sorting (asc|desc) on transaction records<br/>
-Error boundaries for UI fallback<br/>
+- Calculate reward points<br/>
+    - 2 points for every $1 spent over $100<br/>
+    - 1 point for every $1 spent between $50 and $100<br/>
+- Monthly reward points breakdown<br/>
+- Transactions list with rewards per transaction<br/>
+- Implemented filter to retrieve timeline-based transaction data.<br/>
+- Custom pagination for transactions list<br/>
+- Total rewards per customer<br/>
+- Implemented a loading spinner for a smoother and more seamless user experience on API calls(Promises)<br/>
+- Searching and sorting (asc|desc) on transaction records<br/>
+- Error boundaries for UI fallback<br/>
+- Optimized view for all screen sizes (responsive design)<br/>
 
 # Installation
 git clone https://github.com/Sriprasanth8/customer-rewards.git<br/>
@@ -31,30 +32,36 @@ I'm using Axios and josn file to simulate real world API calls.<br/>
 I have create a two sample JSON dataset for API response simulation.<br/>
 
 Transaction API response<br/>
-[<br/>
-    transactionID : String,<br/>
-    customerId: String,<br/>
-    customerName: String,<br/>
-    purchaseDate: "yyyy-mm-dd",<br/>
-    product : String,<br/>
-    totalPrice : Number<br/>
-]<br/>
-<br/>
-Customer API response<br/>
-[<br/>
-  {<br/>
-    "customerId": Number,<br/>
-    "customerName": String,<br/>
-    "transactions": Array[<br/>
-      {<br/>
-        "transactionId": String,<br/>
-        "purchaseDate": "yyyy-mm-dd",<br/>
-        "products": Array[String],<br/>
-        "totalPrice": Number<br/>
-      }<br/>
-    ]<br/>
-  }<br/>
-]<br/>
+```json
+[
+  {
+    "transactionID" : "String",
+    "customerId": "String",
+    "customerName": "String",
+    "purchaseDate": "yyyy-mm-dd",
+    "product" : "String",
+    "totalPrice" : "Number"
+  }
+]
+```
+
+Customer API response
+```json
+[
+  {
+    "customerId": "Number",
+    "customerName": "String",
+    "transactions": [
+      {
+        "transactionId": "String",
+        "purchaseDate": "yyyy-mm-dd",
+        "products": ["String"],
+        "totalPrice": "Number"
+      }
+    ]
+  }
+]
+```
 
 # Author
-Prasanth Alagesan
+> Prasanth Alagesan

@@ -168,7 +168,7 @@ const DashBoard = () => {
                             {timePeriodErr && <p className="text-danger mx-3">{timePeriodErr}</p>}
                         </div>
                         <hr/>
-                        <div className="container-fluid">
+                        <div className="container-fluid overflow-auto">
                             <h2>Transaction Info</h2>
                             <table className="table text-center w-100">
                                 <thead className="thead-dark">

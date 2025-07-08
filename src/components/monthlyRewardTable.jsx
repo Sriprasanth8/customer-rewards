@@ -39,7 +39,7 @@ const MonthlyRewardTable = (prop) => {
     })
 
     return (
-        <>
+        <div className="container-fluid overflow-auto">
             <h3 className="text-center mt-3">Monthly Rewards</h3>
             <table className="table table-dark mt-3 text-center">
                 <thead>
@@ -63,7 +63,7 @@ const MonthlyRewardTable = (prop) => {
                     })}
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }
 
