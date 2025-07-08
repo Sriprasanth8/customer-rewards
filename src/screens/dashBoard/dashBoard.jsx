@@ -37,7 +37,6 @@ const DashBoard = () => {
             }
             Services.getTransactions(obj)
                 .then((res) => {
-                    console.log(res)
                     res.map((val) => val.rewardPoints = calculateRewardPoints(val.totalPrice));
                     setAlltxn(res);
                 })

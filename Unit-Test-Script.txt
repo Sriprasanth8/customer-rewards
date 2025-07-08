@@ -1,0 +1,33 @@
+Test Steps:
+
+1. Navigate to the Rewards Page
+   Make sure the page loads successfully with correctly without any error & data.
+
+2. Enter From and To Date
+   In the "From Date" and "To Date" input fields, enter a valid date range between 2025-01-01 to 2025-07-08.
+   Click the "Filter" button.
+   Transactions and rewards should be filtered according to the selected date range.
+   Try multiple combinations of valid/invalid date ranges.
+
+3. Test Search Functionality
+   Use the search box to look up customers by name.
+   Make sure the displayed customer list updates in real-time or after search submission.
+   Try partial matches.
+
+4. Click on "View" Button to view customer information
+   A detailed section/side tab should appear with the following info
+     Customer Name
+     Customer ID
+     Total Transactions
+     Total Reward Points
+
+5. Verify Monthly Rewards Section
+   Below the customer info, a breakdown of monthly reward points should be visible.
+   Each month with transactions should show total reward points accumulated.
+
+6. Verify Transaction History
+   Below the monthly rewards, a detailed table of all individual transactions for the selected customer should be displayed.
+   Includes: Transaction ID, Date, Products, Amount, and Earned Points
+   Sum of points from each transaction should match the total rewards.
+
+Repeat Scenarios with different customer.

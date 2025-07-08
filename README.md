@@ -7,6 +7,7 @@ Calculate reward points<br/>
     1 point for every $1 spent between $50 and $100<br/>
 Monthly reward points breakdown<br/>
 Transactions list with rewards per transaction<br/>
+Implemented filter to retrieve timeline-based transaction data.<br/>
 Custom pagination for transactions list<br/>
 Total rewards per customer<br/>
 Implemented a loading spinner for a smoother and more seamless user experienceon API calls(Promises)<br/>
@@ -22,11 +23,11 @@ npm run dev<br/>
 # UI
 Build - React version(16+)<br/>
 Style - Bootstrap, CSS-module<br/>
-API - Axios (with Promise-based simulation)<br/>
+API - Axios<br/>
 Testing - Manual Testing<br/>
 
 # Sample dataset
-I'm using Promises to simulate API calls.<br/>
+I'm using Axios and josn file to simulate real world API calls.<br/>
 I have create a two sample JSON dataset for API response simulation.<br/>
 
 Transaction API response<br/>
