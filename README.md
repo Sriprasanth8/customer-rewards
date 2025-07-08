@@ -1,5 +1,5 @@
 # React + Vite
-A **single-page** React application that simulates a **customer rewards** program for a retailer.
+A **single-page** React application that simulates a **Customer Rewards** program for a retailer.
 
 # Feature
 - Calculate reward points<br/>
@@ -65,3 +65,6 @@ Customer API response
 
 # Author
 > Prasanth Alagesan
+
+# UI
+<img src="./src/assets/uiImages/Retailer-dashboard.png" alt="retailer-dashboard" width="100%" height="100%" />
