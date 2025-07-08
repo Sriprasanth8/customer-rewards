@@ -67,4 +67,4 @@ Customer API response
 > Prasanth Alagesan
 
 # UI
-<img src="./src/assets/uiImages/Retailer-dashboard.png" alt="retailer-dashboard" width="100%" height="100%" />
+<img src="./src/assets/uiImages/Retailer-dashboard.png" alt="retailer-dashboard" />
