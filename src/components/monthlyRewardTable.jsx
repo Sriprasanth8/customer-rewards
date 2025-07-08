@@ -1,4 +1,3 @@
-
 import PropTypes from "prop-types";
 
 const MonthlyRewardTable = (prop) => {
@@ -11,7 +10,10 @@ const MonthlyRewardTable = (prop) => {
         const today = new Date();
         const month = today.getMonth()+1-i;
         const year = today.getFullYear();
-        pastThreeMonthData[year+'-'+month]=0;
+        pastThreeMonthData[year+'-'+month]={
+            totalPrice : 0,
+            rewardPoints : 0
+        }
     }
 
     montxn.transactions.forEach((val) => {
@@ -20,13 +22,20 @@ const MonthlyRewardTable = (prop) => {
         const year = now.getFullYear();
         const key = year+'-'+month;
         if(!groupByMonth[key])
-            groupByMonth[key] = 0;
-        groupByMonth[key] += val.rewardPoints;
+            groupByMonth[key] = {
+            totalPrice : 0,
+            rewardPoints : 0
+        };
+        groupByMonth[key].rewardPoints += val.rewardPoints;
+        groupByMonth[key].totalPrice += val.totalPrice;
     })
 
     Object.keys(pastThreeMonthData).forEach((key) => {
         if(groupByMonth[key]) pastThreeMonthData[key] = groupByMonth[key];
-        else pastThreeMonthData[key] = 0;
+        else pastThreeMonthData[key] = {
+            totalPrice : 0,
+            rewardPoints : 0
+        };
     })
 
     return (
@@ -37,6 +46,7 @@ const MonthlyRewardTable = (prop) => {
                     <tr>
                         <td>Month</td>
                         <td>Year</td>
+                        <td>Total Price</td>
                         <td>Rewards Point</td>
                     </tr>
                 </thead>
@@ -44,9 +54,10 @@ const MonthlyRewardTable = (prop) => {
                     {Object.keys(pastThreeMonthData).map((key) => {
                         return (
                         <tr key={key}>
-                            <td>{new Date(key).toLocaleString("default", {month : "short"})}</td>
+                            <td>{new Date(key).toLocaleString("default", {month : "long"})}</td>
                             <td>{new Date(key).getFullYear()}</td>
-                            <td>{pastThreeMonthData[key]}</td>
+                            <td>{parseFloat(pastThreeMonthData[key].totalPrice).toFixed(2)}</td>
+                            <td>{pastThreeMonthData[key].rewardPoints}</td>
                         </tr>
                         );
                     })}

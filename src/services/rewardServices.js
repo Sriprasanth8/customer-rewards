@@ -1,24 +1,22 @@
 import Axios from "./axiosInstance";
-import { customerData, sampleTransactions } from "../json/sampleData";
 
-export const getCustomer = (customerID) => {
-    // return Axios.get("/endpoint/"+customerID);
-    return new Promise((resolve, rejcet) => {
-      let response = customerData.find(user => user.customerId == customerID);
-      if(response)
-        resolve(response);
-      else
-        rejcet("Internal server error");
-    });
+export const getTransactions = async (obj) => {
+  return await Axios.get("json/sampleTransactions.json")
+    .then((res) => {
+      const fromDate = new Date(obj.from);
+      const toDate = obj.to == "" ? new Date() : new Date(obj.to);
+      return res.data.filter((val) => {
+        const purchaseDate = new Date(val.purchaseDate)
+        return (purchaseDate >= fromDate && purchaseDate <=toDate);
+      })
+    })
+    .catch((err) => err);
+    
 }
 
-export const getTransactions = (timePeriod) => {
-    // return Axios.get("/transaction/"+timePeriod);
-    return new Promise((resolve, rejcet) => {
-      let response = sampleTransactions;
-      if(response)
-        resolve(response);
-      else
-        rejcet("400:bad request");
-    });
+export const getCustomer = async (customerId) => {
+  return await Axios.get("json/customerData.json")
+    .then((res) => res.data.find((val) => val.customerId == customerId))
+    .catch((err) => err);
+ 
 }

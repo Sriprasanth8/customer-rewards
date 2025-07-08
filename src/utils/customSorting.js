@@ -10,6 +10,11 @@ export const CustomSorting = (record, sortingConfig) => {
             bVal = new Date(bVal);
         }
 
+        if(sortingConfig.key == "customerName" || sortingConfig.key == "product" ||sortingConfig.key == "products" || sortingConfig.key == "transactionId") {
+            return sortingConfig.direction == "asc" ? aVal.toString().localeCompare(bVal, undefined, { sensitivity: 'base' })
+            : bVal.toString().localeCompare(aVal, undefined, { sensitivity: 'base' })
+        }
+
         if (sortingConfig.direction === "asc") return aVal - bVal;
         else return bVal - aVal;
     }));

@@ -1,11 +1,15 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { CustomSorting } from "../../utils/customSorting";
 import CustomerRewards from "../customerRewardsUI/customerRewards";
-import { sampleTransactions } from "../../json/sampleData";
 import * as Services from "../../services/rewardServices";
+import RenderSortingIcon from "../../components/rederSortingIcon";
+import { calculateRewardPoints } from "../../utils/rewardCalculation";
 
 const DashBoard = () => {
     const [currentPage, setCurrentPage] = useState(1);
+    const [fromDate, setFromDate] = useState("");
+    const [toDate, setToDate] = useState("");
+    const [timePeriodErr, setTimePeriodErr] = useState(undefined);
     const [alltxn, setAlltxn] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(undefined);
@@ -16,30 +20,44 @@ const DashBoard = () => {
     const [toogle, setToogle] = useState(false);
     const itemsPerPage = 5;
 
-    useEffect(() => {
-        setLoading(true);
-        // setTimeout(() => 
-        Services.getTransactions()
-            .then((res) => {
-                setAlltxn(res);
-            })
-            .catch((err) => {
-                // console.error(err);
-                setError(err);
-            })
-            .finally(() => {
-                setLoading(false);
-            })
-        // ,5000);
-        return () => {
-            setAlltxn([]);
+    const dateValication=()=> {
+        if(new Date(fromDate) <= (toDate == "" ? new Date() : new Date(toDate)))
+            return true;
+        setTimePeriodErr("From date should not be greater than To date.")
+        return false;
+    }
+
+    const makeAPIcall=() => {
+        if(dateValication()) {
             setLoading(true);
-        };
-    }, [])
+            // setTimeout(() => 
+            let obj = {
+                from : fromDate,
+                to : toDate
+            }
+            Services.getTransactions(obj)
+                .then((res) => {
+                    console.log(res)
+                    res.map((val) => val.rewardPoints = calculateRewardPoints(val.totalPrice));
+                    setAlltxn(res);
+                })
+                .catch((err) => {
+                    // console.error(err);
+                    setError(err);
+                })
+                .finally(() => {
+                    setLoading(false);
+                })
+            if(toDate == "") {
+                setToDate(new Date().toISOString().split("T")[0])
+            }
+            // ,5000);
+        }
+    }
 
     let data = alltxn;
 
-    const totalRevenue = useMemo(() => alltxn.reduce((acc, val) => val.totalPrice + acc, 0), [alltxn]);
+    const totalRevenue = useMemo(() => alltxn.reduce((acc, val) => parseFloat(val.totalPrice) + acc, 0), [alltxn]);
 
     data = useMemo(() => data?.filter(txn => {
         return txn.customerName.toLowerCase().includes(searchName.toLowerCase()) &&
@@ -72,6 +90,20 @@ const DashBoard = () => {
         setToogle(toogle => !toogle);
     }
 
+    const setDate=(e)=> {
+        if(e.target.name == "reset")
+        {
+            setFromDate("");
+            setToDate("");
+            setAlltxn([]);
+            setTimePeriodErr(undefined);
+        }
+        else if(e.target.name == "fromDate")
+            setFromDate(e.target.value);
+        else
+            setToDate(e.target.value);
+    }
+
     return (
         <>
             <nav className="navbar navbar-light bg-light">
@@ -101,23 +133,50 @@ const DashBoard = () => {
                                 </div>
                                 <div className="col-6 col-md-4 py-3 text-center border-right">
                                     <h3>Revenue</h3>
-                                    <h2 className="text-primary">${totalRevenue.toFixed(2)}</h2>
-                                    <small>*based on 3 month transactions.</small>
+                                    <h2 className="text-primary">${parseFloat(totalRevenue).toFixed(2)}</h2>
+                                    <small>*based on selected transaction period.</small>
                                 </div>
                                 <div className="col-6 col-md-4 py-3 text-center">
                                     <h3>Total Transaction</h3>
-                                    <h2 className="text-primary">{sampleTransactions.length}</h2>
-                                    <small>*based on 3 month records.</small>
+                                    <h2 className="text-primary">{alltxn.length}</h2>
+                                    <small>*based on selected transaction period.</small>
                                 </div>
                             </div>
                         </div>
-                        <hr></hr>
+                        <hr/>
+                        <div>
+                            <h2 className="px-3">Filter</h2>
+                            <div className="row mx-1">
+                                <div className="col-12 col-md-2">
+                                    <div className="form-group">
+                                    <label htmlFor="fromDate">From Date</label>
+                                    <input type="date" name="fromDate" max={new Date().toISOString().split("T")[0]} value={fromDate} onChange={(e) => setDate(e)} className="form-control border-dark"/>
+                                </div>
+                                </div>
+                                <div className="col-12 col-md-2">
+                                    <div className="form-group">
+                                    <label htmlFor="toData">To Date</label>
+                                    <input type="date" name="toDate" max={new Date().toISOString().split("T")[0]} value={toDate} onChange={(e) => setDate(e)} className="form-control border-dark"/>
+                                </div>
+                                </div>
+                                <div className="col-12 col-md-2 d-flex">
+                                    <button className="mt-auto mb-3 border-light bg-primary btn text-white w-100" onClick={() => makeAPIcall()} disabled={fromDate == ""}>Filter</button>
+                                </div>
+                                <div className="col-12 col-md-2 d-flex">
+                                    <button className="mt-auto mb-3 border-primary btn w-100" name="reset" onClick={(e) => setDate(e)} disabled={fromDate == "" && toDate == ""}>Reset</button>
+                                </div>
+                            </div>
+                            {timePeriodErr && <p className="text-danger mx-3">{timePeriodErr}</p>}
+                        </div>
+                        <hr/>
                         <div className="container-fluid">
                             <h2>Transaction Info</h2>
                             <table className="table text-center w-100">
                                 <thead className="thead-dark">
                                     <tr>
-                                        <th>Transaction ID</th>
+                                        <th>Transaction ID
+                                            <RenderSortingIcon columnName="transactionId" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
+                                        </th>
                                         <th>
                                             Customer Name
                                             <input
@@ -127,14 +186,11 @@ const DashBoard = () => {
                                                 value={searchName}
                                                 onChange={handleSearch}
                                             />
+                                            <RenderSortingIcon columnName="customerName" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
                                         </th>
                                         <th >
                                             Purchase Date
-                                            <br/>
-                                            <span className={`btn ${sortConfig.key === "purchaseDate" && sortConfig.direction === "asc" ? "text-success" : "text-white"}`}
-                                                onClick={() => setSortConfig({ direction: "asc", key: "purchaseDate" })}>↑</span>
-                                            <span className={`btn ${sortConfig.key === "purchaseDate" && sortConfig.direction === "desc" ? "text-success" : "text-white"}`}
-                                                onClick={() => setSortConfig({ direction: "desc", key: "purchaseDate" })}>↓</span>
+                                            <RenderSortingIcon columnName="purchaseDate" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
                                         </th>
                                         <th>Product
                                             <input
@@ -144,24 +200,31 @@ const DashBoard = () => {
                                                 value={searchProduct}
                                                 onChange={handleProductSearch}
                                             />
+                                            <RenderSortingIcon columnName="product" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
                                         </th>
                                         <th >
                                             Total Price
-                                            <br/>
-                                            <span className={`btn ${sortConfig.key === "totalPrice" && sortConfig.direction === "asc" ? "text-success" : "text-white"}`}
-                                                onClick={() => setSortConfig({ direction: "asc", key: "totalPrice" })}>↑</span>
-                                            <span className={`btn ${sortConfig.key === "totalPrice" && sortConfig.direction === "desc" ? "text-success" : "text-white"}`} onClick={() => setSortConfig({ direction: "desc", key: "totalPrice" })}>↓</span>
+                                            <RenderSortingIcon columnName="totalPrice" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
+                                        </th>
+                                        <th >
+                                            Reward Points
+                                            <RenderSortingIcon columnName="rewardPoints" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
+                                        </th>
+                                        <th >
+                                            
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {currentItems.map((txn) => (
-                                        <tr key={txn.transactionId} onClick={() => toogleModal(txn.customerId)}>
+                                        <tr key={txn.transactionId}>
                                             <td>{txn.transactionId}</td>
                                             <td data-id="1">{txn.customerName}</td>
                                             <td>{txn.purchaseDate}</td>
                                             <td>{txn.product}</td>
-                                            <td>${txn.totalPrice.toFixed(2)}</td>
+                                            <td>${parseFloat(txn.totalPrice).toFixed(2)}</td>
+                                            <td>{txn.rewardPoints}</td>
+                                            <td><button className="btn btn-primary" onClick={() => toogleModal(txn.customerId)}>View</button></td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -186,13 +249,19 @@ const DashBoard = () => {
                                         </button>
                                     </div>
                                 </div>
-                                : <p className="text-center text-danger h5">No data found</p>}
+                                : <p className={`text-center h5 my-5 ${(fromDate !== "" && toDate !=="") ? "text-danger" : "text-success"}`}>
+                                    {(fromDate !== "" && toDate !=="")? "No data found" : "Select the time period to get data"}
+                                    </p>
+                                }
                         </div>
                         {toogle &&
                             <CustomerRewards toogleModal={toogleModal} selectedCustomerId={selectedCustomerId} />
                         }
                     </>
             }
+            <footer className="text-center bg-light p-4 mt-4">
+                &copy; Prasanth Alagesan
+            </footer>
         </>
     );
 };

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import * as Services from "../../services/rewardServices";
-import MonthlyRewardTable from "./monthlyRewardTable";
+import MonthlyRewardTable from "../../components/monthlyRewardTable";
 import { calculateRewardPoints } from "../../utils/rewardCalculation";
-import TransactionTable from "./transactionTable";
+import TransactionTable from "../../components/transactionTable";
+import styles from "./customerReward.module.css";
 
 const CustomerRewards = (prop) => {
 
@@ -15,8 +16,8 @@ const CustomerRewards = (prop) => {
         setLoading(true);
         Services.getCustomer(selectedCustomerId)
             .then(res => {
-                res.transactions.map(txn => { txn.rewardPoints = calculateRewardPoints(txn.totalPrice) })
-                res.totalRewardPoints = res.transactions.reduce((acc, txn) => { acc.totalReward += txn.rewardPoints; acc.totalPurchase += txn.totalPrice; return acc }, { totalReward: 0, totalPurchase: 0 });
+                res.transactions.map(txn => txn.rewardPoints = calculateRewardPoints(txn.totalPrice))
+                res.totalRewardPoints = res.transactions.reduce((acc, txn) => { acc.totalReward += txn.rewardPoints; acc.totalPurchase += parseFloat(txn.totalPrice); return acc }, { totalReward: 0, totalPurchase: 0 });
                 setCusInfo(res);
             })
             .catch(error =>
@@ -60,7 +61,7 @@ const CustomerRewards = (prop) => {
                                     </div>
                                     <div className="col-6 py-3 text-center border-right">
                                         <h3>Total Purchase</h3>
-                                        <h2 className="text-primary">${cusInfo.totalRewardPoints.totalPurchase.toFixed(2)}</h2>
+                                        <h2 className="text-primary">${parseFloat(cusInfo.totalRewardPoints.totalPurchase).toFixed(2)}</h2>
                                     </div>
                                     <div className="col-6 py-3 text-center">
                                         <h3>Total Rewards</h3>
@@ -68,7 +69,7 @@ const CustomerRewards = (prop) => {
                                     </div>
                                 </div>
                                 <MonthlyRewardTable cusInfo={cusInfo} />
-                                <TransactionTable cusInfo={cusInfo} />
+                                <TransactionTable cusInfo={cusInfo} styles={styles} />
                             </div>
                         }
                     </>

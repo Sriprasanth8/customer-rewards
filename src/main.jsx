@@ -6,9 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorBoundary from './errorHandler/uiErrors';
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+  <StrictMode>
     <ErrorBoundary>
       <App />
     </ErrorBoundary>
-  // </StrictMode>,
+  </StrictMode>,
 )

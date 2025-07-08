@@ -1,0 +1,1111 @@
+[
+  {
+    "customerId": 1001,
+    "customerName": "Alice Johnson",
+    "transactions": [
+      {
+        "transactionId": "TXN0002",
+        "purchaseDate": "2025-03-29",
+        "products": [
+          "Mouse",
+          "Monitor",
+          "Laptop"
+        ],
+        "totalPrice": 475.86
+      },
+      {
+        "transactionId": "TXN0001",
+        "purchaseDate": "2025-01-04",
+        "products": [
+          "Laptop"
+        ],
+        "totalPrice": 849.81
+      }
+    ]
+  },
+  {
+    "customerId": 1002,
+    "customerName": "Bob Smith",
+    "transactions": [
+      {
+        "transactionId": "TXN0007",
+        "purchaseDate": "2025-06-17",
+        "products": [
+          "Printer",
+          "Tablet",
+          "Keyboard"
+        ],
+        "totalPrice": 600.37
+      },
+      {
+        "transactionId": "TXN0005",
+        "purchaseDate": "2025-06-09",
+        "products": [
+          "Headphones"
+        ],
+        "totalPrice": 545.01
+      },
+      {
+        "transactionId": "TXN0006",
+        "purchaseDate": "2025-05-05",
+        "products": [
+          "Tablet",
+          "Monitor",
+          "Printer"
+        ],
+        "totalPrice": 331.67
+      },
+      {
+        "transactionId": "TXN0105",
+        "purchaseDate": "2025-03-27",
+        "products": [
+          "Monitor",
+          "Laptop",
+          "Phone"
+        ],
+        "totalPrice": 836.97
+      },
+      {
+        "transactionId": "TXN0084",
+        "purchaseDate": "2025-03-24",
+        "products": [
+          "Headphones",
+          "Phone"
+        ],
+        "totalPrice": 69.51
+      },
+      {
+        "transactionId": "TXN0110",
+        "purchaseDate": "2025-03-22",
+        "products": [
+          "Monitor",
+          "Phone"
+        ],
+        "totalPrice": 887.99
+      },
+      {
+        "transactionId": "TXN0088",
+        "purchaseDate": "2025-02-28",
+        "products": [
+          "Monitor",
+          "Keyboard"
+        ],
+        "totalPrice": 874.44
+      },
+      {
+        "transactionId": "TXN0003",
+        "purchaseDate": "2025-02-04",
+        "products": [
+          "Headphones",
+          "Tablet"
+        ],
+        "totalPrice": 546.33
+      },
+      {
+        "transactionId": "TXN0008",
+        "purchaseDate": "2025-01-25",
+        "products": [
+          "Laptop",
+          "Headphones"
+        ],
+        "totalPrice": 332.19
+      },
+      {
+        "transactionId": "TXN0004",
+        "purchaseDate": "2025-01-15",
+        "products": [
+          "Mouse",
+          "Keyboard",
+          "Laptop"
+        ],
+        "totalPrice": 554.59
+      }
+    ]
+  },
+  {
+    "customerId": 1003,
+    "customerName": "Charlie Davis",
+    "transactions": [
+      {
+        "transactionId": "TXN0012",
+        "purchaseDate": "2025-06-12",
+        "products": [
+          "Headphones"
+        ],
+        "totalPrice": 941.23
+      },
+      {
+        "transactionId": "TXN0095",
+        "purchaseDate": "2025-05-29",
+        "products": [
+          "Laptop",
+          "Monitor"
+        ],
+        "totalPrice": 460.95
+      },
+      {
+        "transactionId": "TXN0090",
+        "purchaseDate": "2025-03-26",
+        "products": [
+          "Headphones",
+          "Tablet"
+        ],
+        "totalPrice": 997.61
+      },
+      {
+        "transactionId": "TXN0011",
+        "purchaseDate": "2025-03-25",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 426.67
+      },
+      {
+        "transactionId": "TXN0091",
+        "purchaseDate": "2025-02-25",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 89.58
+      },
+      {
+        "transactionId": "TXN0009",
+        "purchaseDate": "2025-02-16",
+        "products": [
+          "Monitor",
+          "Phone",
+          "Mouse"
+        ],
+        "totalPrice": 152.13
+      },
+      {
+        "transactionId": "TXN0010",
+        "purchaseDate": "2025-01-11",
+        "products": [
+          "Laptop",
+          "Monitor",
+          "Keyboard"
+        ],
+        "totalPrice": 979.76
+      }
+    ]
+  },
+  {
+    "customerId": 1004,
+    "customerName": "Diana Evans",
+    "transactions": [
+      {
+        "transactionId": "TXN0092",
+        "purchaseDate": "2025-04-30",
+        "products": [
+          "Phone",
+          "Keyboard"
+        ],
+        "totalPrice": 516.3
+      },
+      {
+        "transactionId": "TXN0014",
+        "purchaseDate": "2025-04-28",
+        "products": [
+          "Keyboard",
+          "Printer"
+        ],
+        "totalPrice": 993.07
+      },
+      {
+        "transactionId": "TXN0100",
+        "purchaseDate": "2025-03-23",
+        "products": [
+          "Monitor"
+        ],
+        "totalPrice": 323.42
+      },
+      {
+        "transactionId": "TXN0013",
+        "purchaseDate": "2025-02-27",
+        "products": [
+          "Phone",
+          "Mouse"
+        ],
+        "totalPrice": 237.07
+      },
+      {
+        "transactionId": "TXN0015",
+        "purchaseDate": "2025-01-10",
+        "products": [
+          "Tablet",
+          "Mouse"
+        ],
+        "totalPrice": 701.65
+      }
+    ]
+  },
+  {
+    "customerId": 1005,
+    "customerName": "Ethan Harris",
+    "transactions": [
+      {
+        "transactionId": "TXN0018",
+        "purchaseDate": "2025-06-10",
+        "products": [
+          "Keyboard",
+          "Tablet",
+          "Printer"
+        ],
+        "totalPrice": 885.68
+      },
+      {
+        "transactionId": "TXN0103",
+        "purchaseDate": "2025-05-28",
+        "products": [
+          "Headphones"
+        ],
+        "totalPrice": 71.38
+      },
+      {
+        "transactionId": "TXN0016",
+        "purchaseDate": "2025-05-08",
+        "products": [
+          "Printer",
+          "Laptop"
+        ],
+        "totalPrice": 239.02
+      },
+      {
+        "transactionId": "TXN0017",
+        "purchaseDate": "2025-04-02",
+        "products": [
+          "Phone"
+        ],
+        "totalPrice": 680.36
+      },
+      {
+        "transactionId": "TXN0019",
+        "purchaseDate": "2025-02-16",
+        "products": [
+          "Monitor",
+          "Tablet",
+          "Mouse"
+        ],
+        "totalPrice": 935.95
+      },
+      {
+        "transactionId": "TXN0020",
+        "purchaseDate": "2025-01-26",
+        "products": [
+          "Mouse",
+          "Keyboard",
+          "Headphones"
+        ],
+        "totalPrice": 857.05
+      }
+    ]
+  },
+  {
+    "customerId": 1006,
+    "customerName": "Fiona Clark",
+    "transactions": [
+      {
+        "transactionId": "TXN0098",
+        "purchaseDate": "2025-06-15",
+        "products": [
+          "Tablet"
+        ],
+        "totalPrice": 300.54
+      },
+      {
+        "transactionId": "TXN0023",
+        "purchaseDate": "2025-06-07",
+        "products": [
+          "Phone",
+          "Laptop",
+          "Monitor"
+        ],
+        "totalPrice": 761.31
+      },
+      {
+        "transactionId": "TXN0024",
+        "purchaseDate": "2025-05-12",
+        "products": [
+          "Keyboard",
+          "Printer"
+        ],
+        "totalPrice": 598.56
+      },
+      {
+        "transactionId": "TXN0021",
+        "purchaseDate": "2025-04-29",
+        "products": [
+          "Laptop",
+          "Keyboard",
+          "Headphones"
+        ],
+        "totalPrice": 441.67
+      },
+      {
+        "transactionId": "TXN0022",
+        "purchaseDate": "2025-03-31",
+        "products": [
+          "Headphones"
+        ],
+        "totalPrice": 242.88
+      },
+      {
+        "transactionId": "TXN0104",
+        "purchaseDate": "2025-02-26",
+        "products": [
+          "Laptop",
+          "Keyboard",
+          "Headphones"
+        ],
+        "totalPrice": 271.39
+      }
+    ]
+  },
+  {
+    "customerId": 1007,
+    "customerName": "George Lewis",
+    "transactions": [
+      {
+        "transactionId": "TXN0030",
+        "purchaseDate": "2025-06-11",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 986.66
+      },
+      {
+        "transactionId": "TXN0029",
+        "purchaseDate": "2025-04-27",
+        "products": [
+          "Printer",
+          "Monitor"
+        ],
+        "totalPrice": 576.99
+      },
+      {
+        "transactionId": "TXN0026",
+        "purchaseDate": "2025-04-25",
+        "products": [
+          "Keyboard",
+          "Laptop",
+          "Tablet"
+        ],
+        "totalPrice": 450.23
+      },
+      {
+        "transactionId": "TXN0025",
+        "purchaseDate": "2025-02-06",
+        "products": [
+          "Monitor",
+          "Headphones"
+        ],
+        "totalPrice": 919.89
+      },
+      {
+        "transactionId": "TXN0027",
+        "purchaseDate": "2025-01-28",
+        "products": [
+          "Mouse"
+        ],
+        "totalPrice": 326.21
+      },
+      {
+        "transactionId": "TXN0028",
+        "purchaseDate": "2025-01-16",
+        "products": [
+          "Phone"
+        ],
+        "totalPrice": 205.98
+      }
+    ]
+  },
+  {
+    "customerId": 1008,
+    "customerName": "Hannah Walker",
+    "transactions": [
+      {
+        "transactionId": "TXN0107",
+        "purchaseDate": "2025-07-02",
+        "products": [
+          "Mouse",
+          "Keyboard",
+          "Laptop"
+        ],
+        "totalPrice": 965.54
+      },
+      {
+        "transactionId": "TXN0031",
+        "purchaseDate": "2025-06-27",
+        "products": [
+          "Headphones"
+        ],
+        "totalPrice": 842.9
+      },
+      {
+        "transactionId": "TXN0089",
+        "purchaseDate": "2025-06-16",
+        "products": [
+          "Monitor"
+        ],
+        "totalPrice": 235.4
+      },
+      {
+        "transactionId": "TXN0106",
+        "purchaseDate": "2025-06-11",
+        "products": [
+          "Mouse"
+        ],
+        "totalPrice": 387.67
+      },
+      {
+        "transactionId": "TXN0034",
+        "purchaseDate": "2025-04-20",
+        "products": [
+          "Mouse"
+        ],
+        "totalPrice": 922.86
+      },
+      {
+        "transactionId": "TXN0036",
+        "purchaseDate": "2025-03-31",
+        "products": [
+          "Mouse",
+          "Laptop"
+        ],
+        "totalPrice": 588.7
+      },
+      {
+        "transactionId": "TXN0108",
+        "purchaseDate": "2025-03-24",
+        "products": [
+          "Phone"
+        ],
+        "totalPrice": 925.0
+      },
+      {
+        "transactionId": "TXN0035",
+        "purchaseDate": "2025-03-03",
+        "products": [
+          "Laptop",
+          "Tablet"
+        ],
+        "totalPrice": 293.59
+      },
+      {
+        "transactionId": "TXN0033",
+        "purchaseDate": "2025-01-10",
+        "products": [
+          "Mouse"
+        ],
+        "totalPrice": 609.63
+      },
+      {
+        "transactionId": "TXN0037",
+        "purchaseDate": "2025-01-08",
+        "products": [
+          "Monitor"
+        ],
+        "totalPrice": 392.97
+      },
+      {
+        "transactionId": "TXN0032",
+        "purchaseDate": "2025-01-04",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 446.14
+      }
+    ]
+  },
+  {
+    "customerId": 1009,
+    "customerName": "Ian Young",
+    "transactions": [
+      {
+        "transactionId": "TXN0039",
+        "purchaseDate": "2025-07-03",
+        "products": [
+          "Printer"
+        ],
+        "totalPrice": 157.07
+      },
+      {
+        "transactionId": "TXN0042",
+        "purchaseDate": "2025-06-25",
+        "products": [
+          "Tablet",
+          "Keyboard"
+        ],
+        "totalPrice": 604.65
+      },
+      {
+        "transactionId": "TXN0038",
+        "purchaseDate": "2025-06-24",
+        "products": [
+          "Laptop",
+          "Headphones",
+          "Keyboard"
+        ],
+        "totalPrice": 541.35
+      },
+      {
+        "transactionId": "TXN0044",
+        "purchaseDate": "2025-06-11",
+        "products": [
+          "Headphones",
+          "Keyboard",
+          "Laptop"
+        ],
+        "totalPrice": 310.19
+      },
+      {
+        "transactionId": "TXN0043",
+        "purchaseDate": "2025-04-20",
+        "products": [
+          "Printer"
+        ],
+        "totalPrice": 302.01
+      },
+      {
+        "transactionId": "TXN0041",
+        "purchaseDate": "2025-03-10",
+        "products": [
+          "Laptop"
+        ],
+        "totalPrice": 353.34
+      },
+      {
+        "transactionId": "TXN0040",
+        "purchaseDate": "2025-01-29",
+        "products": [
+          "Monitor",
+          "Laptop"
+        ],
+        "totalPrice": 319.26
+      }
+    ]
+  },
+  {
+    "customerId": 1010,
+    "customerName": "Julia King",
+    "transactions": [
+      {
+        "transactionId": "TXN0101",
+        "purchaseDate": "2025-06-17",
+        "products": [
+          "Mouse",
+          "Printer"
+        ],
+        "totalPrice": 697.49
+      },
+      {
+        "transactionId": "TXN0047",
+        "purchaseDate": "2025-06-02",
+        "products": [
+          "Printer"
+        ],
+        "totalPrice": 501.05
+      },
+      {
+        "transactionId": "TXN0097",
+        "purchaseDate": "2025-05-01",
+        "products": [
+          "Printer",
+          "Headphones",
+          "Laptop"
+        ],
+        "totalPrice": 837.64
+      },
+      {
+        "transactionId": "TXN0045",
+        "purchaseDate": "2025-04-30",
+        "products": [
+          "Monitor",
+          "Headphones"
+        ],
+        "totalPrice": 132.0
+      },
+      {
+        "transactionId": "TXN0046",
+        "purchaseDate": "2025-04-16",
+        "products": [
+          "Laptop",
+          "Printer",
+          "Mouse"
+        ],
+        "totalPrice": 106.26
+      },
+      {
+        "transactionId": "TXN0099",
+        "purchaseDate": "2025-01-15",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 654.14
+      }
+    ]
+  },
+  {
+    "customerId": 1011,
+    "customerName": "Kevin Scott",
+    "transactions": [
+      {
+        "transactionId": "TXN0048",
+        "purchaseDate": "2025-01-27",
+        "products": [
+          "Tablet",
+          "Laptop"
+        ],
+        "totalPrice": 239.71
+      }
+    ]
+  },
+  {
+    "customerId": 1012,
+    "customerName": "Laura Adams",
+    "transactions": [
+      {
+        "transactionId": "TXN0096",
+        "purchaseDate": "2025-07-07",
+        "products": [
+          "Mouse",
+          "Headphones",
+          "Keyboard"
+        ],
+        "totalPrice": 857.94
+      },
+      {
+        "transactionId": "TXN0049",
+        "purchaseDate": "2025-06-01",
+        "products": [
+          "Tablet",
+          "Headphones",
+          "Phone"
+        ],
+        "totalPrice": 114.06
+      },
+      {
+        "transactionId": "TXN0053",
+        "purchaseDate": "2025-05-22",
+        "products": [
+          "Mouse",
+          "Keyboard",
+          "Printer"
+        ],
+        "totalPrice": 201.69
+      },
+      {
+        "transactionId": "TXN0051",
+        "purchaseDate": "2025-04-22",
+        "products": [
+          "Monitor",
+          "Phone"
+        ],
+        "totalPrice": 762.12
+      },
+      {
+        "transactionId": "TXN0052",
+        "purchaseDate": "2025-02-18",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 750.08
+      },
+      {
+        "transactionId": "TXN0054",
+        "purchaseDate": "2025-01-31",
+        "products": [
+          "Mouse"
+        ],
+        "totalPrice": 344.43
+      },
+      {
+        "transactionId": "TXN0050",
+        "purchaseDate": "2025-01-19",
+        "products": [
+          "Keyboard",
+          "Tablet"
+        ],
+        "totalPrice": 355.88
+      }
+    ]
+  },
+  {
+    "customerId": 1013,
+    "customerName": "Mike Baker",
+    "transactions": [
+      {
+        "transactionId": "TXN0059",
+        "purchaseDate": "2025-05-22",
+        "products": [
+          "Monitor",
+          "Mouse"
+        ],
+        "totalPrice": 193.31
+      },
+      {
+        "transactionId": "TXN0060",
+        "purchaseDate": "2025-05-09",
+        "products": [
+          "Keyboard",
+          "Mouse"
+        ],
+        "totalPrice": 451.66
+      },
+      {
+        "transactionId": "TXN0057",
+        "purchaseDate": "2025-05-01",
+        "products": [
+          "Tablet",
+          "Laptop"
+        ],
+        "totalPrice": 858.75
+      },
+      {
+        "transactionId": "TXN0056",
+        "purchaseDate": "2025-04-13",
+        "products": [
+          "Laptop",
+          "Headphones",
+          "Keyboard"
+        ],
+        "totalPrice": 308.96
+      },
+      {
+        "transactionId": "TXN0102",
+        "purchaseDate": "2025-03-28",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 643.31
+      },
+      {
+        "transactionId": "TXN0058",
+        "purchaseDate": "2025-02-16",
+        "products": [
+          "Printer",
+          "Mouse"
+        ],
+        "totalPrice": 680.77
+      },
+      {
+        "transactionId": "TXN0055",
+        "purchaseDate": "2025-01-02",
+        "products": [
+          "Mouse",
+          "Phone"
+        ],
+        "totalPrice": 370.85
+      }
+    ]
+  },
+  {
+    "customerId": 1014,
+    "customerName": "Nina Campbell",
+    "transactions": [
+      {
+        "transactionId": "TXN0085",
+        "purchaseDate": "2025-06-28",
+        "products": [
+          "Printer",
+          "Keyboard",
+          "Phone"
+        ],
+        "totalPrice": 665.49
+      },
+      {
+        "transactionId": "TXN0061",
+        "purchaseDate": "2025-03-04",
+        "products": [
+          "Mouse",
+          "Keyboard",
+          "Printer"
+        ],
+        "totalPrice": 211.67
+      },
+      {
+        "transactionId": "TXN0094",
+        "purchaseDate": "2025-03-01",
+        "products": [
+          "Monitor"
+        ],
+        "totalPrice": 944.99
+      },
+      {
+        "transactionId": "TXN0062",
+        "purchaseDate": "2025-02-04",
+        "products": [
+          "Printer"
+        ],
+        "totalPrice": 557.31
+      },
+      {
+        "transactionId": "TXN0063",
+        "purchaseDate": "2025-01-16",
+        "products": [
+          "Monitor"
+        ],
+        "totalPrice": 731.18
+      }
+    ]
+  },
+  {
+    "customerId": 1015,
+    "customerName": "Oscar Diaz",
+    "transactions": [
+      {
+        "transactionId": "TXN0065",
+        "purchaseDate": "2025-06-01",
+        "products": [
+          "Tablet"
+        ],
+        "totalPrice": 374.59
+      },
+      {
+        "transactionId": "TXN0111",
+        "purchaseDate": "2025-05-25",
+        "products": [
+          "Headphones",
+          "Keyboard"
+        ],
+        "totalPrice": 435.9
+      },
+      {
+        "transactionId": "TXN0064",
+        "purchaseDate": "2025-04-27",
+        "products": [
+          "Tablet"
+        ],
+        "totalPrice": 303.12
+      },
+      {
+        "transactionId": "TXN0066",
+        "purchaseDate": "2025-04-02",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 670.19
+      },
+      {
+        "transactionId": "TXN0067",
+        "purchaseDate": "2025-03-29",
+        "products": [
+          "Tablet",
+          "Mouse",
+          "Laptop"
+        ],
+        "totalPrice": 456.3
+      },
+      {
+        "transactionId": "TXN0093",
+        "purchaseDate": "2025-02-11",
+        "products": [
+          "Printer"
+        ],
+        "totalPrice": 465.73
+      }
+    ]
+  },
+  {
+    "customerId": 1016,
+    "customerName": "Paula Edwards",
+    "transactions": [
+      {
+        "transactionId": "TXN0070",
+        "purchaseDate": "2025-06-19",
+        "products": [
+          "Tablet",
+          "Mouse",
+          "Printer"
+        ],
+        "totalPrice": 139.47
+      },
+      {
+        "transactionId": "TXN0069",
+        "purchaseDate": "2025-06-16",
+        "products": [
+          "Mouse",
+          "Laptop"
+        ],
+        "totalPrice": 821.03
+      },
+      {
+        "transactionId": "TXN0071",
+        "purchaseDate": "2025-04-08",
+        "products": [
+          "Laptop",
+          "Printer",
+          "Headphones"
+        ],
+        "totalPrice": 98.42
+      },
+      {
+        "transactionId": "TXN0068",
+        "purchaseDate": "2025-04-02",
+        "products": [
+          "Monitor",
+          "Headphones"
+        ],
+        "totalPrice": 963.97
+      }
+    ]
+  },
+  {
+    "customerId": 1017,
+    "customerName": "Quentin Foster",
+    "transactions": [
+      {
+        "transactionId": "TXN0073",
+        "purchaseDate": "2025-05-30",
+        "products": [
+          "Phone",
+          "Laptop"
+        ],
+        "totalPrice": 342.99
+      },
+      {
+        "transactionId": "TXN0072",
+        "purchaseDate": "2025-02-24",
+        "products": [
+          "Mouse",
+          "Headphones"
+        ],
+        "totalPrice": 213.57
+      }
+    ]
+  },
+  {
+    "customerId": 1018,
+    "customerName": "Rachel Green",
+    "transactions": [
+      {
+        "transactionId": "TXN0074",
+        "purchaseDate": "2025-06-23",
+        "products": [
+          "Monitor",
+          "Phone"
+        ],
+        "totalPrice": 260.75
+      },
+      {
+        "transactionId": "TXN0075",
+        "purchaseDate": "2025-05-29",
+        "products": [
+          "Printer"
+        ],
+        "totalPrice": 101.03
+      },
+      {
+        "transactionId": "TXN0077",
+        "purchaseDate": "2025-04-28",
+        "products": [
+          "Phone",
+          "Mouse"
+        ],
+        "totalPrice": 409.19
+      },
+      {
+        "transactionId": "TXN0076",
+        "purchaseDate": "2025-04-13",
+        "products": [
+          "Keyboard"
+        ],
+        "totalPrice": 107.46
+      },
+      {
+        "transactionId": "TXN0087",
+        "purchaseDate": "2025-02-13",
+        "products": [
+          "Laptop",
+          "Keyboard",
+          "Mouse"
+        ],
+        "totalPrice": 485.35
+      }
+    ]
+  },
+  {
+    "customerId": 1019,
+    "customerName": "Steve Hall",
+    "transactions": [
+      {
+        "transactionId": "TXN0109",
+        "purchaseDate": "2025-07-08",
+        "products": [
+          "Mouse",
+          "Phone"
+        ],
+        "totalPrice": 977.28
+      },
+      {
+        "transactionId": "TXN0078",
+        "purchaseDate": "2025-06-04",
+        "products": [
+          "Monitor"
+        ],
+        "totalPrice": 79.26
+      }
+    ]
+  },
+  {
+    "customerId": 1020,
+    "customerName": "Tina Irwin",
+    "transactions": [
+      {
+        "transactionId": "TXN0080",
+        "purchaseDate": "2025-06-29",
+        "products": [
+          "Phone",
+          "Monitor"
+        ],
+        "totalPrice": 842.05
+      },
+      {
+        "transactionId": "TXN0086",
+        "purchaseDate": "2025-05-14",
+        "products": [
+          "Mouse"
+        ],
+        "totalPrice": 941.91
+      },
+      {
+        "transactionId": "TXN0082",
+        "purchaseDate": "2025-05-03",
+        "products": [
+          "Printer",
+          "Monitor"
+        ],
+        "totalPrice": 501.32
+      },
+      {
+        "transactionId": "TXN0083",
+        "purchaseDate": "2025-05-02",
+        "products": [
+          "Tablet"
+        ],
+        "totalPrice": 828.78
+      },
+      {
+        "transactionId": "TXN0081",
+        "purchaseDate": "2025-04-14",
+        "products": [
+          "Laptop",
+          "Phone",
+          "Monitor"
+        ],
+        "totalPrice": 142.29
+      },
+      {
+        "transactionId": "TXN0079",
+        "purchaseDate": "2025-04-07",
+        "products": [
+          "Laptop",
+          "Mouse",
+          "Tablet"
+        ],
+        "totalPrice": 712.03
+      }
+    ]
+  }
+]

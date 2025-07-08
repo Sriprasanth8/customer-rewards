@@ -17,8 +17,9 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="text-center text-danger my-5">
-          <h2>Something went wrong.</h2>
+        <div className="text-center my-5">
+          <h2 className="text-danger">We apologize for the inconvenience.</h2>
+          <h4>We are fixing it. Kindly refresh the page and try again shortly.</h4>
           <p>{this.state.errorMsg}</p>
           <button className="btn btn-primary" onClick={() => window.location.reload()}>
             Refresh Page

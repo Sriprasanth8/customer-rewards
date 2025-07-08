@@ -1,9 +1,9 @@
 
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { CustomSorting } from "../../utils/customSorting";
-import styles from "./customerReward.module.css";
-import { useDebounce } from "../../utils/debounce";
+import { CustomSorting } from "../utils/customSorting";
+import { useDebounce } from "../utils/debounce";
+import RenderSortingIcon from "./rederSortingIcon";
 
 
 const TransactionTable = (prop) => {
@@ -26,17 +26,15 @@ const TransactionTable = (prop) => {
     return (
         <>
             <h3 className="text-center mt-4">Transactions</h3>
-            <div id={styles.cusTxnTableContainer}>
+            <div id={prop.styles.cusTxnTableContainer}>
                 <table className="table table-dark text-center mt-3">
                     <thead className="thead-dark">
                         <tr>
-                            <td >Transaction ID</td>
+                            <td >Transaction ID
+                                <RenderSortingIcon columnName="transactionId" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
+                            </td>
                             <td>Purchase Date
-                                <br />
-                                <span className={`btn ${sortConfig.key === "purchaseDate" && sortConfig.direction === "asc" ? "text-success" : "text-white"}`}
-                                    onClick={() => setSortConfig({ direction: "asc", key: "purchaseDate" })}>↑</span>
-                                <span className={`btn ${sortConfig.key === "purchaseDate" && sortConfig.direction === "desc" ? "text-success" : "text-white"}`}
-                                    onClick={() => setSortConfig({ direction: "desc", key: "purchaseDate" })}>↓</span>
+                                <RenderSortingIcon columnName="purchaseDate" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
                             </td>
                             <td>Product
                                 <input
@@ -46,14 +44,13 @@ const TransactionTable = (prop) => {
                                     value={searchProduct}
                                     onChange={handleProductSearch}
                                 />
+                                <RenderSortingIcon columnName="products" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
                             </td>
-                            <td>Total Price</td>
+                            <td>Total Price
+                                <RenderSortingIcon columnName="totalPrice" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
+                            </td>
                             <td>Rewards Point
-                                <br />
-                                <span className={`btn ${sortConfig.key === "rewardPoints" && sortConfig.direction === "asc" ? "text-success" : "text-white"}`}
-                                    onClick={() => setSortConfig({ direction: "asc", key: "rewardPoints" })}>↑</span>
-                                <span className={`btn ${sortConfig.key === "rewardPoints" && sortConfig.direction === "desc" ? "text-success" : "text-white"}`}
-                                    onClick={() => setSortConfig({ direction: "desc", key: "rewardPoints" })}>↓</span>
+                                <RenderSortingIcon columnName="rewardPoints" setSortConfig={setSortConfig} sortConfig={sortConfig}/>
                             </td>
                         </tr>
                     </thead>
