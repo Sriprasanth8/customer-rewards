@@ -65,3 +65,26 @@ Customer API response
 
 # Author
 > Prasanth Alagesan
+
+# UI
+Retailer dashboard
+<img src="./src/assets/uiImages/Retailer-dashboard.png" alt="Retailer-dashboard" />
+
+Date validation
+<img src="./src/assets/uiImages/From-to-date-validation.png"  alt="Date-validation" />
+
+Transaction table with filtering & sorting options
+<img src="./src/assets/uiImages/Transaction-data-for-specific-timeline.png" alt="Transaction table with filtering & sorting options" />
+
+Specific side tab for each customer information
+<img src="./src/assets/uiImages/Customer-Info-tab.png"  alt="Specific side tab for each customer information" />
+
+Fallback UI with Error Boundaries
+<img src="./src/assets/uiImages/Fallback-ui-for-ui-errors.png"  alt="Fallback UI with Error Boundaries" />
+
+API Error Handling
+<img src="./src/assets/uiImages/Error-screen-for-api-failed.png"  alt="API Error Handling" />
+
+Mobile Views
+<img src="./src/assets/uiImages/mobile-view-1.png"  alt="API Error Handling" />
+<img src="./src/assets/uiImages/mobile-view-2.png"  alt="API Error Handling" />
