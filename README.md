@@ -63,6 +63,28 @@ Customer API response
 ]
 ```
 
+# Directory structure
+customer-rewards/
+├── public/
+│   └── json/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── errorHandler/
+│   ├── screens/
+│   │   ├── customerRewardsUI/
+│   │   └── dashBoard/
+│   ├── services/
+│   ├── utils/
+│   ├── App.css
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+├── README.md
+├── Unit_Test_Script.txt
+└── vite.config.js
+
 # Author
 > Prasanth Alagesan
 

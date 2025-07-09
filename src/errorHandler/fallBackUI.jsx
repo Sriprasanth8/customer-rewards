@@ -19,7 +19,7 @@ class ErrorBoundary extends React.Component {
       return (
         <div className="text-center my-5">
           <h2 className="text-danger">We apologize for the inconvenience.</h2>
-          <h4>We are fixing it. Kindly refresh the page and try again shortly.</h4>
+          <h4>We are fixing the issue. Kindly refresh the page and try again shortly.</h4>
           <button className="btn btn-primary" onClick={() => window.location.reload()}>
             Refresh Page
           </button>
