@@ -107,6 +107,6 @@ Fallback UI with Error Boundaries
 API Error Handling
 <img src="./src/assets/uiImages/Error-screen-for-api-failed.png"  alt="API Error Handling" />
 
-Mobile Views
+Mobile Views<br/>
 <img src="./src/assets/uiImages/mobile-view-1.png"  alt="API Error Handling" />
 <img src="./src/assets/uiImages/mobile-view-2.png"  alt="API Error Handling" />
