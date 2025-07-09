@@ -64,9 +64,10 @@ Customer API response
 ```
 
 # Directory structure
-customer-rewards/<br/>
-├── public/<br/>
-│   └── json/<br/>
+```bash
+customer-rewards/
+├── public/
+│   └── json/
 ├── src/
 │   ├── assets/
 │   ├── components/
@@ -84,6 +85,7 @@ customer-rewards/<br/>
 ├── README.md
 ├── Unit_Test_Script.txt
 └── vite.config.js
+```
 
 # Author
 > Prasanth Alagesan
