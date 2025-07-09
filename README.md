@@ -64,9 +64,9 @@ Customer API response
 ```
 
 # Directory structure
-customer-rewards/
-├── public/
-│   └── json/
+customer-rewards/<br/>
+├── public/<br/>
+│   └── json/<br/>
 ├── src/
 │   ├── assets/
 │   ├── components/
