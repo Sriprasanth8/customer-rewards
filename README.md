@@ -82,11 +82,11 @@ Date validation
 Transaction table with filtering & sorting options
 <img src="./src/assets/uiImages/Datas-for-specific-timeline.png" alt="Transaction table with filtering & sorting options" />
 
-Fallback UI with Error Boundaries
-<img src="./src/assets/uiImages/Fallback-ui.png"  alt="Fallback UI with Error Boundaries" />
+Fallback UI for Error
+<img src="./src/assets/uiImages/Fallback-ui.png"  alt="Fallback UI for Error" />
 
-No data
-<img src="./src/assets/uiImages/No-data.png"  alt="API Error Handling" />
+No data with the specific timeline
+<img src="./src/assets/uiImages/No-data.png"  alt="No-data" />
 
 Mobile Views<br/>
-<img src="./src/assets/uiImages/Mobile-view.png"  alt="API Error Handling" />
+<img src="./src/assets/uiImages/Mobile-view.png"  alt="Mobile view" />
