@@ -4,15 +4,15 @@
     "customerId": 1001,
     "customerName": "Alice Johnson",
     "purchaseDate": "2025-01-04",
-    "product": "Laptop",
+    "products": null,
     "totalPrice": "849.81"
   },
   {
     "transactionId": "TXN0002",
     "customerId": 1001,
-    "customerName": "Alice Johnson",
+    "customerName": null,
     "purchaseDate": "2025-03-29",
-    "product": "Mouse, Monitor, Laptop",
+    "products": "Mouse, Monitor, Laptop",
     "totalPrice": "475.86"
   },
   {
@@ -20,7 +20,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-02-04",
-    "product": "Headphones, Tablet",
+    "products": "Headphones, Tablet",
     "totalPrice": "546.33"
   },
   {
@@ -28,7 +28,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-01-15",
-    "product": "Mouse, Keyboard, Laptop",
+    "products": "Mouse, Keyboard, Laptop",
     "totalPrice": "554.59"
   },
   {
@@ -36,7 +36,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-06-09",
-    "product": "Headphones",
+    "products": "Headphones",
     "totalPrice": "545.01"
   },
   {
@@ -44,7 +44,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-05-05",
-    "product": "Tablet, Monitor, Printer",
+    "products": "Tablet, Monitor, Printer",
     "totalPrice": "331.67"
   },
   {
@@ -52,7 +52,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-06-17",
-    "product": "Printer, Tablet, Keyboard",
+    "products": "Printer, Tablet, Keyboard",
     "totalPrice": "600.37"
   },
   {
@@ -60,7 +60,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-01-25",
-    "product": "Laptop, Headphones",
+    "products": "Laptop, Headphones",
     "totalPrice": "332.19"
   },
   {
@@ -68,7 +68,7 @@
     "customerId": 1003,
     "customerName": "Charlie Davis",
     "purchaseDate": "2025-02-16",
-    "product": "Monitor, Phone, Mouse",
+    "products": "Monitor, Phone, Mouse",
     "totalPrice": "152.13"
   },
   {
@@ -76,7 +76,7 @@
     "customerId": 1003,
     "customerName": "Charlie Davis",
     "purchaseDate": "2025-01-11",
-    "product": "Laptop, Monitor, Keyboard",
+    "products": "Laptop, Monitor, Keyboard",
     "totalPrice": "979.76"
   },
   {
@@ -84,7 +84,7 @@
     "customerId": 1003,
     "customerName": "Charlie Davis",
     "purchaseDate": "2025-03-25",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "426.67"
   },
   {
@@ -92,7 +92,7 @@
     "customerId": 1003,
     "customerName": "Charlie Davis",
     "purchaseDate": "2025-06-12",
-    "product": "Headphones",
+    "products": "Headphones",
     "totalPrice": "941.23"
   },
   {
@@ -100,7 +100,7 @@
     "customerId": 1004,
     "customerName": "Diana Evans",
     "purchaseDate": "2025-02-27",
-    "product": "Phone, Mouse",
+    "products": "Phone, Mouse",
     "totalPrice": "237.07"
   },
   {
@@ -108,7 +108,7 @@
     "customerId": 1004,
     "customerName": "Diana Evans",
     "purchaseDate": "2025-04-28",
-    "product": "Keyboard, Printer",
+    "products": "Keyboard, Printer",
     "totalPrice": "993.07"
   },
   {
@@ -116,7 +116,7 @@
     "customerId": 1004,
     "customerName": "Diana Evans",
     "purchaseDate": "2025-01-10",
-    "product": "Tablet, Mouse",
+    "products": "Tablet, Mouse",
     "totalPrice": "701.65"
   },
   {
@@ -124,7 +124,7 @@
     "customerId": 1005,
     "customerName": "Ethan Harris",
     "purchaseDate": "2025-05-08",
-    "product": "Printer, Laptop",
+    "products": "Printer, Laptop",
     "totalPrice": "239.02"
   },
   {
@@ -132,7 +132,7 @@
     "customerId": 1005,
     "customerName": "Ethan Harris",
     "purchaseDate": "2025-04-02",
-    "product": "Phone",
+    "products": "Phone",
     "totalPrice": "680.36"
   },
   {
@@ -140,7 +140,7 @@
     "customerId": 1005,
     "customerName": "Ethan Harris",
     "purchaseDate": "2025-06-10",
-    "product": "Keyboard, Tablet, Printer",
+    "products": "Keyboard, Tablet, Printer",
     "totalPrice": "885.68"
   },
   {
@@ -148,7 +148,7 @@
     "customerId": 1005,
     "customerName": "Ethan Harris",
     "purchaseDate": "2025-02-16",
-    "product": "Monitor, Tablet, Mouse",
+    "products": "Monitor, Tablet, Mouse",
     "totalPrice": "935.95"
   },
   {
@@ -156,7 +156,7 @@
     "customerId": 1005,
     "customerName": "Ethan Harris",
     "purchaseDate": "2025-01-26",
-    "product": "Mouse, Keyboard, Headphones",
+    "products": "Mouse, Keyboard, Headphones",
     "totalPrice": "857.05"
   },
   {
@@ -164,7 +164,7 @@
     "customerId": 1006,
     "customerName": "Fiona Clark",
     "purchaseDate": "2025-04-29",
-    "product": "Laptop, Keyboard, Headphones",
+    "products": "Laptop, Keyboard, Headphones",
     "totalPrice": "441.67"
   },
   {
@@ -172,7 +172,7 @@
     "customerId": 1006,
     "customerName": "Fiona Clark",
     "purchaseDate": "2025-03-31",
-    "product": "Headphones",
+    "products": "Headphones",
     "totalPrice": "242.88"
   },
   {
@@ -180,7 +180,7 @@
     "customerId": 1006,
     "customerName": "Fiona Clark",
     "purchaseDate": "2025-06-07",
-    "product": "Phone, Laptop, Monitor",
+    "products": "Phone, Laptop, Monitor",
     "totalPrice": "761.31"
   },
   {
@@ -188,7 +188,7 @@
     "customerId": 1006,
     "customerName": "Fiona Clark",
     "purchaseDate": "2025-05-12",
-    "product": "Keyboard, Printer",
+    "products": "Keyboard, Printer",
     "totalPrice": "598.56"
   },
   {
@@ -196,7 +196,7 @@
     "customerId": 1007,
     "customerName": "George Lewis",
     "purchaseDate": "2025-02-06",
-    "product": "Monitor, Headphones",
+    "products": "Monitor, Headphones",
     "totalPrice": "919.89"
   },
   {
@@ -204,7 +204,7 @@
     "customerId": 1007,
     "customerName": "George Lewis",
     "purchaseDate": "2025-04-25",
-    "product": "Keyboard, Laptop, Tablet",
+    "products": "Keyboard, Laptop, Tablet",
     "totalPrice": "450.23"
   },
   {
@@ -212,7 +212,7 @@
     "customerId": 1007,
     "customerName": "George Lewis",
     "purchaseDate": "2025-01-28",
-    "product": "Mouse",
+    "products": "Mouse",
     "totalPrice": "326.21"
   },
   {
@@ -220,7 +220,7 @@
     "customerId": 1007,
     "customerName": "George Lewis",
     "purchaseDate": "2025-01-16",
-    "product": "Phone",
+    "products": "Phone",
     "totalPrice": "205.98"
   },
   {
@@ -228,7 +228,7 @@
     "customerId": 1007,
     "customerName": "George Lewis",
     "purchaseDate": "2025-04-27",
-    "product": "Printer, Monitor",
+    "products": "Printer, Monitor",
     "totalPrice": "576.99"
   },
   {
@@ -236,7 +236,7 @@
     "customerId": 1007,
     "customerName": "George Lewis",
     "purchaseDate": "2025-06-11",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "986.66"
   },
   {
@@ -244,7 +244,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-06-27",
-    "product": "Headphones",
+    "products": "Headphones",
     "totalPrice": "842.90"
   },
   {
@@ -252,7 +252,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-01-04",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "446.14"
   },
   {
@@ -260,7 +260,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-01-10",
-    "product": "Mouse",
+    "products": "Mouse",
     "totalPrice": "609.63"
   },
   {
@@ -268,7 +268,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-04-20",
-    "product": "Mouse",
+    "products": "Mouse",
     "totalPrice": "922.86"
   },
   {
@@ -276,7 +276,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-03-03",
-    "product": "Laptop, Tablet",
+    "products": "Laptop, Tablet",
     "totalPrice": "293.59"
   },
   {
@@ -284,7 +284,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-03-31",
-    "product": "Mouse, Laptop",
+    "products": "Mouse, Laptop",
     "totalPrice": "588.70"
   },
   {
@@ -292,7 +292,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-01-08",
-    "product": "Monitor",
+    "products": "Monitor",
     "totalPrice": "392.97"
   },
   {
@@ -300,7 +300,7 @@
     "customerId": 1009,
     "customerName": "Ian Young",
     "purchaseDate": "2025-06-24",
-    "product": "Laptop, Headphones, Keyboard",
+    "products": "Laptop, Headphones, Keyboard",
     "totalPrice": "541.35"
   },
   {
@@ -308,7 +308,7 @@
     "customerId": 1009,
     "customerName": "Ian Young",
     "purchaseDate": "2025-07-03",
-    "product": "Printer",
+    "products": "Printer",
     "totalPrice": "157.07"
   },
   {
@@ -316,7 +316,7 @@
     "customerId": 1009,
     "customerName": "Ian Young",
     "purchaseDate": "2025-01-29",
-    "product": "Monitor, Laptop",
+    "products": "Monitor, Laptop",
     "totalPrice": "319.26"
   },
   {
@@ -324,7 +324,7 @@
     "customerId": 1009,
     "customerName": "Ian Young",
     "purchaseDate": "2025-03-10",
-    "product": "Laptop",
+    "products": "Laptop",
     "totalPrice": "353.34"
   },
   {
@@ -332,7 +332,7 @@
     "customerId": 1009,
     "customerName": "Ian Young",
     "purchaseDate": "2025-06-25",
-    "product": "Tablet, Keyboard",
+    "products": "Tablet, Keyboard",
     "totalPrice": "604.65"
   },
   {
@@ -340,7 +340,7 @@
     "customerId": 1009,
     "customerName": "Ian Young",
     "purchaseDate": "2025-04-20",
-    "product": "Printer",
+    "products": "Printer",
     "totalPrice": "302.01"
   },
   {
@@ -348,7 +348,7 @@
     "customerId": 1009,
     "customerName": "Ian Young",
     "purchaseDate": "2025-06-11",
-    "product": "Headphones, Keyboard, Laptop",
+    "products": "Headphones, Keyboard, Laptop",
     "totalPrice": "310.19"
   },
   {
@@ -356,7 +356,7 @@
     "customerId": 1010,
     "customerName": "Julia King",
     "purchaseDate": "2025-04-30",
-    "product": "Monitor, Headphones",
+    "products": "Monitor, Headphones",
     "totalPrice": "132.00"
   },
   {
@@ -364,7 +364,7 @@
     "customerId": 1010,
     "customerName": "Julia King",
     "purchaseDate": "2025-04-16",
-    "product": "Laptop, Printer, Mouse",
+    "products": "Laptop, Printer, Mouse",
     "totalPrice": "106.26"
   },
   {
@@ -372,7 +372,7 @@
     "customerId": 1010,
     "customerName": "Julia King",
     "purchaseDate": "2025-06-02",
-    "product": "Printer",
+    "products": "Printer",
     "totalPrice": "501.05"
   },
   {
@@ -380,7 +380,7 @@
     "customerId": 1011,
     "customerName": "Kevin Scott",
     "purchaseDate": "2025-01-27",
-    "product": "Tablet, Laptop",
+    "products": "Tablet, Laptop",
     "totalPrice": "239.71"
   },
   {
@@ -388,7 +388,7 @@
     "customerId": 1012,
     "customerName": "Laura Adams",
     "purchaseDate": "2025-06-01",
-    "product": "Tablet, Headphones, Phone",
+    "products": "Tablet, Headphones, Phone",
     "totalPrice": "114.06"
   },
   {
@@ -396,7 +396,7 @@
     "customerId": 1012,
     "customerName": "Laura Adams",
     "purchaseDate": "2025-01-19",
-    "product": "Keyboard, Tablet",
+    "products": "Keyboard, Tablet",
     "totalPrice": "355.88"
   },
   {
@@ -404,7 +404,7 @@
     "customerId": 1012,
     "customerName": "Laura Adams",
     "purchaseDate": "2025-04-22",
-    "product": "Monitor, Phone",
+    "products": "Monitor, Phone",
     "totalPrice": "762.12"
   },
   {
@@ -412,7 +412,7 @@
     "customerId": 1012,
     "customerName": "Laura Adams",
     "purchaseDate": "2025-02-18",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "750.08"
   },
   {
@@ -420,7 +420,7 @@
     "customerId": 1012,
     "customerName": "Laura Adams",
     "purchaseDate": "2025-05-22",
-    "product": "Mouse, Keyboard, Printer",
+    "products": "Mouse, Keyboard, Printer",
     "totalPrice": "201.69"
   },
   {
@@ -428,7 +428,7 @@
     "customerId": 1012,
     "customerName": "Laura Adams",
     "purchaseDate": "2025-01-31",
-    "product": "Mouse",
+    "products": "Mouse",
     "totalPrice": "344.43"
   },
   {
@@ -436,7 +436,7 @@
     "customerId": 1013,
     "customerName": "Mike Baker",
     "purchaseDate": "2025-01-02",
-    "product": "Mouse, Phone",
+    "products": "Mouse, Phone",
     "totalPrice": "370.85"
   },
   {
@@ -444,7 +444,7 @@
     "customerId": 1013,
     "customerName": "Mike Baker",
     "purchaseDate": "2025-04-13",
-    "product": "Laptop, Headphones, Keyboard",
+    "products": "Laptop, Headphones, Keyboard",
     "totalPrice": "308.96"
   },
   {
@@ -452,7 +452,7 @@
     "customerId": 1013,
     "customerName": "Mike Baker",
     "purchaseDate": "2025-05-01",
-    "product": "Tablet, Laptop",
+    "products": "Tablet, Laptop",
     "totalPrice": "858.75"
   },
   {
@@ -460,7 +460,7 @@
     "customerId": 1013,
     "customerName": "Mike Baker",
     "purchaseDate": "2025-02-16",
-    "product": "Printer, Mouse",
+    "products": "Printer, Mouse",
     "totalPrice": "680.77"
   },
   {
@@ -468,7 +468,7 @@
     "customerId": 1013,
     "customerName": "Mike Baker",
     "purchaseDate": "2025-05-22",
-    "product": "Monitor, Mouse",
+    "products": "Monitor, Mouse",
     "totalPrice": "193.31"
   },
   {
@@ -476,7 +476,7 @@
     "customerId": 1013,
     "customerName": "Mike Baker",
     "purchaseDate": "2025-05-09",
-    "product": "Keyboard, Mouse",
+    "products": "Keyboard, Mouse",
     "totalPrice": "451.66"
   },
   {
@@ -484,7 +484,7 @@
     "customerId": 1014,
     "customerName": "Nina Campbell",
     "purchaseDate": "2025-03-04",
-    "product": "Mouse, Keyboard, Printer",
+    "products": "Mouse, Keyboard, Printer",
     "totalPrice": "211.67"
   },
   {
@@ -492,7 +492,7 @@
     "customerId": 1014,
     "customerName": "Nina Campbell",
     "purchaseDate": "2025-02-04",
-    "product": "Printer",
+    "products": "Printer",
     "totalPrice": "557.31"
   },
   {
@@ -500,7 +500,7 @@
     "customerId": 1014,
     "customerName": "Nina Campbell",
     "purchaseDate": "2025-01-16",
-    "product": "Monitor",
+    "products": "Monitor",
     "totalPrice": "731.18"
   },
   {
@@ -508,7 +508,7 @@
     "customerId": 1015,
     "customerName": "Oscar Diaz",
     "purchaseDate": "2025-04-27",
-    "product": "Tablet",
+    "products": "Tablet",
     "totalPrice": "303.12"
   },
   {
@@ -516,7 +516,7 @@
     "customerId": 1015,
     "customerName": "Oscar Diaz",
     "purchaseDate": "2025-06-01",
-    "product": "Tablet",
+    "products": "Tablet",
     "totalPrice": "374.59"
   },
   {
@@ -524,7 +524,7 @@
     "customerId": 1015,
     "customerName": "Oscar Diaz",
     "purchaseDate": "2025-04-02",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "670.19"
   },
   {
@@ -532,7 +532,7 @@
     "customerId": 1015,
     "customerName": "Oscar Diaz",
     "purchaseDate": "2025-03-29",
-    "product": "Tablet, Mouse, Laptop",
+    "products": "Tablet, Mouse, Laptop",
     "totalPrice": "456.30"
   },
   {
@@ -540,7 +540,7 @@
     "customerId": 1016,
     "customerName": "Paula Edwards",
     "purchaseDate": "2025-04-02",
-    "product": "Monitor, Headphones",
+    "products": "Monitor, Headphones",
     "totalPrice": "963.97"
   },
   {
@@ -548,7 +548,7 @@
     "customerId": 1016,
     "customerName": "Paula Edwards",
     "purchaseDate": "2025-06-16",
-    "product": "Mouse, Laptop",
+    "products": "Mouse, Laptop",
     "totalPrice": "821.03"
   },
   {
@@ -556,7 +556,7 @@
     "customerId": 1016,
     "customerName": "Paula Edwards",
     "purchaseDate": "2025-06-19",
-    "product": "Tablet, Mouse, Printer",
+    "products": "Tablet, Mouse, Printer",
     "totalPrice": "139.47"
   },
   {
@@ -564,7 +564,7 @@
     "customerId": 1016,
     "customerName": "Paula Edwards",
     "purchaseDate": "2025-04-08",
-    "product": "Laptop, Printer, Headphones",
+    "products": "Laptop, Printer, Headphones",
     "totalPrice": "98.42"
   },
   {
@@ -572,7 +572,7 @@
     "customerId": 1017,
     "customerName": "Quentin Foster",
     "purchaseDate": "2025-02-24",
-    "product": "Mouse, Headphones",
+    "products": "Mouse, Headphones",
     "totalPrice": "213.57"
   },
   {
@@ -580,7 +580,7 @@
     "customerId": 1017,
     "customerName": "Quentin Foster",
     "purchaseDate": "2025-05-30",
-    "product": "Phone, Laptop",
+    "products": "Phone, Laptop",
     "totalPrice": "342.99"
   },
   {
@@ -588,7 +588,7 @@
     "customerId": 1018,
     "customerName": "Rachel Green",
     "purchaseDate": "2025-06-23",
-    "product": "Monitor, Phone",
+    "products": "Monitor, Phone",
     "totalPrice": "260.75"
   },
   {
@@ -596,7 +596,7 @@
     "customerId": 1018,
     "customerName": "Rachel Green",
     "purchaseDate": "2025-05-29",
-    "product": "Printer",
+    "products": "Printer",
     "totalPrice": "101.03"
   },
   {
@@ -604,7 +604,7 @@
     "customerId": 1018,
     "customerName": "Rachel Green",
     "purchaseDate": "2025-04-13",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "107.46"
   },
   {
@@ -612,7 +612,7 @@
     "customerId": 1018,
     "customerName": "Rachel Green",
     "purchaseDate": "2025-04-28",
-    "product": "Phone, Mouse",
+    "products": "Phone, Mouse",
     "totalPrice": "409.19"
   },
   {
@@ -620,7 +620,7 @@
     "customerId": 1019,
     "customerName": "Steve Hall",
     "purchaseDate": "2025-06-04",
-    "product": "Monitor",
+    "products": "Monitor",
     "totalPrice": "79.26"
   },
   {
@@ -628,7 +628,7 @@
     "customerId": 1020,
     "customerName": "Tina Irwin",
     "purchaseDate": "2025-04-07",
-    "product": "Laptop, Mouse, Tablet",
+    "products": "Laptop, Mouse, Tablet",
     "totalPrice": "712.03"
   },
   {
@@ -636,7 +636,7 @@
     "customerId": 1020,
     "customerName": "Tina Irwin",
     "purchaseDate": "2025-06-29",
-    "product": "Phone, Monitor",
+    "products": "Phone, Monitor",
     "totalPrice": "842.05"
   },
   {
@@ -644,7 +644,7 @@
     "customerId": 1020,
     "customerName": "Tina Irwin",
     "purchaseDate": "2025-04-14",
-    "product": "Laptop, Phone, Monitor",
+    "products": "Laptop, Phone, Monitor",
     "totalPrice": "142.29"
   },
   {
@@ -652,7 +652,7 @@
     "customerId": 1020,
     "customerName": "Tina Irwin",
     "purchaseDate": "2025-05-03",
-    "product": "Printer, Monitor",
+    "products": "Printer, Monitor",
     "totalPrice": "501.32"
   },
   {
@@ -660,7 +660,7 @@
     "customerId": 1020,
     "customerName": "Tina Irwin",
     "purchaseDate": "2025-05-02",
-    "product": "Tablet",
+    "products": "Tablet",
     "totalPrice": "828.78"
   },
   {
@@ -668,7 +668,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-03-24",
-    "product": "Headphones, Phone",
+    "products": "Headphones, Phone",
     "totalPrice": "69.51"
   },
   {
@@ -676,7 +676,7 @@
     "customerId": 1014,
     "customerName": "Nina Campbell",
     "purchaseDate": "2025-06-28",
-    "product": "Printer, Keyboard, Phone",
+    "products": "Printer, Keyboard, Phone",
     "totalPrice": "665.49"
   },
   {
@@ -684,7 +684,7 @@
     "customerId": 1020,
     "customerName": "Tina Irwin",
     "purchaseDate": "2025-05-14",
-    "product": "Mouse",
+    "products": "Mouse",
     "totalPrice": "941.91"
   },
   {
@@ -692,7 +692,7 @@
     "customerId": 1018,
     "customerName": "Rachel Green",
     "purchaseDate": "2025-02-13",
-    "product": "Laptop, Keyboard, Mouse",
+    "products": "Laptop, Keyboard, Mouse",
     "totalPrice": "485.35"
   },
   {
@@ -700,7 +700,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-02-28",
-    "product": "Monitor, Keyboard",
+    "products": "Monitor, Keyboard",
     "totalPrice": "874.44"
   },
   {
@@ -708,7 +708,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-06-16",
-    "product": "Monitor",
+    "products": "Monitor",
     "totalPrice": "235.40"
   },
   {
@@ -716,7 +716,7 @@
     "customerId": 1003,
     "customerName": "Charlie Davis",
     "purchaseDate": "2025-03-26",
-    "product": "Headphones, Tablet",
+    "products": "Headphones, Tablet",
     "totalPrice": "997.61"
   },
   {
@@ -724,7 +724,7 @@
     "customerId": 1003,
     "customerName": "Charlie Davis",
     "purchaseDate": "2025-02-25",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "89.58"
   },
   {
@@ -732,7 +732,7 @@
     "customerId": 1004,
     "customerName": "Diana Evans",
     "purchaseDate": "2025-04-30",
-    "product": "Phone, Keyboard",
+    "products": "Phone, Keyboard",
     "totalPrice": "516.30"
   },
   {
@@ -740,7 +740,7 @@
     "customerId": 1015,
     "customerName": "Oscar Diaz",
     "purchaseDate": "2025-02-11",
-    "product": "Printer",
+    "products": "Printer",
     "totalPrice": "465.73"
   },
   {
@@ -748,7 +748,7 @@
     "customerId": 1014,
     "customerName": "Nina Campbell",
     "purchaseDate": "2025-03-01",
-    "product": "Monitor",
+    "products": "Monitor",
     "totalPrice": "944.99"
   },
   {
@@ -756,7 +756,7 @@
     "customerId": 1003,
     "customerName": "Charlie Davis",
     "purchaseDate": "2025-05-29",
-    "product": "Laptop, Monitor",
+    "products": "Laptop, Monitor",
     "totalPrice": "460.95"
   },
   {
@@ -764,7 +764,7 @@
     "customerId": 1012,
     "customerName": "Laura Adams",
     "purchaseDate": "2025-07-07",
-    "product": "Mouse, Headphones, Keyboard",
+    "products": "Mouse, Headphones, Keyboard",
     "totalPrice": "857.94"
   },
   {
@@ -772,7 +772,7 @@
     "customerId": 1010,
     "customerName": "Julia King",
     "purchaseDate": "2025-05-01",
-    "product": "Printer, Headphones, Laptop",
+    "products": "Printer, Headphones, Laptop",
     "totalPrice": "837.64"
   },
   {
@@ -780,7 +780,7 @@
     "customerId": 1006,
     "customerName": "Fiona Clark",
     "purchaseDate": "2025-06-15",
-    "product": "Tablet",
+    "products": "Tablet",
     "totalPrice": "300.54"
   },
   {
@@ -788,7 +788,7 @@
     "customerId": 1010,
     "customerName": "Julia King",
     "purchaseDate": "2025-01-15",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "654.14"
   },
   {
@@ -796,7 +796,7 @@
     "customerId": 1004,
     "customerName": "Diana Evans",
     "purchaseDate": "2025-03-23",
-    "product": "Monitor",
+    "products": "Monitor",
     "totalPrice": "323.42"
   },
   {
@@ -804,7 +804,7 @@
     "customerId": 1010,
     "customerName": "Julia King",
     "purchaseDate": "2025-06-17",
-    "product": "Mouse, Printer",
+    "products": "Mouse, Printer",
     "totalPrice": "697.49"
   },
   {
@@ -812,7 +812,7 @@
     "customerId": 1013,
     "customerName": "Mike Baker",
     "purchaseDate": "2025-03-28",
-    "product": "Keyboard",
+    "products": "Keyboard",
     "totalPrice": "643.31"
   },
   {
@@ -820,7 +820,7 @@
     "customerId": 1005,
     "customerName": "Ethan Harris",
     "purchaseDate": "2025-05-28",
-    "product": "Headphones",
+    "products": "Headphones",
     "totalPrice": "71.38"
   },
   {
@@ -828,7 +828,7 @@
     "customerId": 1006,
     "customerName": "Fiona Clark",
     "purchaseDate": "2025-02-26",
-    "product": "Laptop, Keyboard, Headphones",
+    "products": "Laptop, Keyboard, Headphones",
     "totalPrice": "271.39"
   },
   {
@@ -836,7 +836,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-03-27",
-    "product": "Monitor, Laptop, Phone",
+    "products": "Monitor, Laptop, Phone",
     "totalPrice": "836.97"
   },
   {
@@ -844,7 +844,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-06-11",
-    "product": "Mouse",
+    "products": "Mouse",
     "totalPrice": "387.67"
   },
   {
@@ -852,7 +852,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-07-02",
-    "product": "Mouse, Keyboard, Laptop",
+    "products": "Mouse, Keyboard, Laptop",
     "totalPrice": "965.54"
   },
   {
@@ -860,7 +860,7 @@
     "customerId": 1008,
     "customerName": "Hannah Walker",
     "purchaseDate": "2025-03-24",
-    "product": "Phone",
+    "products": "Phone",
     "totalPrice": "925.00"
   },
   {
@@ -868,7 +868,7 @@
     "customerId": 1019,
     "customerName": "Steve Hall",
     "purchaseDate": "2025-07-08",
-    "product": "Mouse, Phone",
+    "products": "Mouse, Phone",
     "totalPrice": "977.28"
   },
   {
@@ -876,7 +876,7 @@
     "customerId": 1002,
     "customerName": "Bob Smith",
     "purchaseDate": "2025-03-22",
-    "product": "Monitor, Phone",
+    "products": "Monitor, Phone",
     "totalPrice": "887.99"
   },
   {
@@ -884,7 +884,7 @@
     "customerId": 1015,
     "customerName": "Oscar Diaz",
     "purchaseDate": "2025-05-25",
-    "product": "Headphones, Keyboard",
+    "products": "Headphones, Keyboard",
     "totalPrice": "435.90"
   }
 ]

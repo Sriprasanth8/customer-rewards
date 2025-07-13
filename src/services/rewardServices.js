@@ -1,7 +1,8 @@
-import Axios from "./axiosInstance";
+import Axios from "axios";
+import PropTypes from 'prop-types';
 
 export const getTransactions = async (obj) => {
-  return await Axios.get("json/sampleTransactions.json")
+  return await Axios.get("json/transactions.json")
     .then((res) => {
       const fromDate = new Date(obj.from);
       const toDate = obj.to == "" ? new Date() : new Date(obj.to);
@@ -11,12 +12,11 @@ export const getTransactions = async (obj) => {
       })
     })
     .catch((err) => err);
-    
 }
 
-export const getCustomer = async (customerId) => {
-  return await Axios.get("json/customerData.json")
-    .then((res) => res.data.find((val) => val.customerId == customerId))
-    .catch((err) => err);
- 
+getTransactions.propTypes = {
+  obj : PropTypes.shape({
+    from : PropTypes.string.isRequired,
+    to : PropTypes.string
+  })
 }

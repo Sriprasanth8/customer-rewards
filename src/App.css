@@ -1,13 +1,8 @@
-
-#customerInfo {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 65%;
-  height: 100vh;
-  background-color: antiquewhite;
-  min-height: 100%;
-  z-index: 99;
-  overflow: auto;
+@media only Screen and (max-width : 480px) {
+  .tableResponsive {
+    overflow-x: auto;
+  }
 }
+
+
 
