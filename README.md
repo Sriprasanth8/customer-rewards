@@ -8,7 +8,7 @@ A **single-page** React application that simulates a **Customer Rewards** progra
 - Monthly reward points breakdown<br/>
 - Transactions list with rewards per transaction<br/>
 - Implemented filter to retrieve timeline-based transaction data.<br/>
-- Custom pagination for transactions list<br/>
+- Custom pagination for tables<br/>
 - Total rewards per customer<br/>
 - Implemented a loading spinner for a smoother and more seamless user experience on API calls(Promises)<br/>
 - Searching and sorting (asc|desc) on transaction records<br/>
@@ -23,42 +23,24 @@ npm run dev<br/>
 
 # UI
 Build - React version(16+)<br/>
-Style - Bootstrap, CSS-module<br/>
+Style - Bootstrap, CSS<br/>
 API - Axios<br/>
 Testing - Manual Testing<br/>
 
 # Sample dataset
 I'm using Axios and josn file to simulate real world API calls.<br/>
-I have create a two sample JSON dataset for API response simulation.<br/>
+I have create a sample JSON dataset for API response simulation.<br/>
 
 Transaction API response<br/>
 ```json
 [
   {
-    "transactionID" : "String",
-    "customerId": "String",
-    "customerName": "String",
+    "transactionID" : "string",
+    "customerId": "string",
+    "customerName": "string",
     "purchaseDate": "yyyy-mm-dd",
-    "product" : "String",
-    "totalPrice" : "Number"
-  }
-]
-```
-
-Customer API response
-```json
-[
-  {
-    "customerId": "Number",
-    "customerName": "String",
-    "transactions": [
-      {
-        "transactionId": "String",
-        "purchaseDate": "yyyy-mm-dd",
-        "products": ["String"],
-        "totalPrice": "Number"
-      }
-    ]
+    "product" : "string",
+    "totalPrice" : "number"
   }
 ]
 ```
@@ -73,14 +55,14 @@ customer-rewards/
 │   ├── components/
 │   ├── errorHandler/
 │   ├── screens/
-│   │   ├── customerRewardsUI/
-│   │   └── dashBoard/
+│   │   └── dashBoard/sections/
 │   ├── services/
 │   ├── utils/
 │   ├── App.css
 │   ├── App.jsx
 │   └── main.jsx
 ├── index.html
+├── eslint-report.json
 ├── package.json
 ├── README.md
 ├── Unit_Test_Script.txt
@@ -92,23 +74,19 @@ customer-rewards/
 
 # UI
 Retailer dashboard
-<img src="./src/assets/uiImages/Retailer-dashboard.png" alt="Retailer-dashboard" />
+<img src="./src/assets/uiImages/Landing-page.png" alt="Retailer-dashboard" />
 
 Date validation
-<img src="./src/assets/uiImages/From-to-date-validation.png"  alt="Date-validation" />
+<img src="./src/assets/uiImages/Date-validation.png"  alt="Date-validation" />
 
 Transaction table with filtering & sorting options
-<img src="./src/assets/uiImages/Transaction-data-for-specific-timeline.png" alt="Transaction table with filtering & sorting options" />
-
-Specific side tab for each customer information
-<img src="./src/assets/uiImages/Customer-Info-tab.png"  alt="Specific side tab for each customer information" />
+<img src="./src/assets/uiImages/Datas-for-specific-timeline.png" alt="Transaction table with filtering & sorting options" />
 
 Fallback UI with Error Boundaries
-<img src="./src/assets/uiImages/Fallback-ui-for-ui-errors.png"  alt="Fallback UI with Error Boundaries" />
+<img src="./src/assets/uiImages/Fallback-ui.png"  alt="Fallback UI with Error Boundaries" />
 
-API Error Handling
-<img src="./src/assets/uiImages/Error-screen-for-api-failed.png"  alt="API Error Handling" />
+No data
+<img src="./src/assets/uiImages/No-data.png"  alt="API Error Handling" />
 
 Mobile Views<br/>
-<img src="./src/assets/uiImages/mobile-view-1.png"  alt="API Error Handling" />
-<img src="./src/assets/uiImages/mobile-view-2.png"  alt="API Error Handling" />
+<img src="./src/assets/uiImages/Mobile-view.png"  alt="API Error Handling" />
