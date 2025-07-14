@@ -3,6 +3,12 @@ import { CustomSorting } from "../../../utils/customSorting";
 import CustomTable from "../../../components/customTable";
 import PropTypes from "prop-types";
 
+/**
+ * 
+ * @param {Object} props
+ * @param {Array<import("../screens/dashBoard/sections/monthlyRewards").Transaction>} props.transactionInfo 
+ * @returns {JSX.Element}
+ */
 const TotalRewards = ({ transactionInfo }) => {
     const [searchName, setSearchName] = useState("");
     const [sortConfig, setSortConfig] = useState({ key: "customerId", direction: "asc" });

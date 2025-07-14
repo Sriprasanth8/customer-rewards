@@ -1,5 +1,17 @@
 import PropTypes from "prop-types";
 
+/**
+ * @typedef {Object} SortObj
+ * @property {string}  key
+ * @property {string} direction
+ */
+
+/**
+ * 
+ * @param {Object} data 
+ * @param {SortObj} sortingConfig 
+ * @returns {Object}
+ */
 export const CustomSorting = (data, sortingConfig) => {
     return ([...data].sort((a, b) => {
         if (!sortingConfig.key) return 0;

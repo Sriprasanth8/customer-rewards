@@ -1,6 +1,17 @@
 import Axios from "axios";
 import PropTypes from 'prop-types';
 
+/**
+ * @typedef {Object} TimeLine
+ * @property {string} from
+ * @property {string} to
+ */
+
+/**
+ * 
+ * @param {TimeLine} obj 
+ * @returns {Promise<Object>}
+ */
 export const getTransactions = async (obj) => {
   return await Axios.get("json/transactions.json")
     .then((res) => {
