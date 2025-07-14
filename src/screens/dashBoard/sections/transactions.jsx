@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { CustomSorting } from "../../../utils/customSorting";
+import { CustomSorting, CustomFiltering } from "../../../utils/customSorting";
 import CustomTable from "../../../components/customTable";
 import PropTypes from "prop-types";
 
@@ -29,20 +29,12 @@ const Transactions = ({ transactionInfo }) => {
 
   let data = transactionInfo;
 
-  data = useMemo(
-    () =>
-      data?.filter((txn) => {
-        return (
-          (txn.customerName ?? "")
-            .toLowerCase()
-            .includes(searchName.toLowerCase()) &&
-          (txn.products ?? "")
-            .toLowerCase()
-            .includes(searchProducts.toLowerCase())
-        );
-      }),
-    [data, searchName, searchProducts]
-  );
+  data = useMemo(() => {
+    let res = data;
+    if (searchName) res = CustomFiltering(res, "customerName", searchName);
+    if (searchProducts) res = CustomFiltering(res, "products", searchProducts);
+    return res;
+  }, [data, searchName, searchProducts]);
 
   data = useMemo(() => CustomSorting(data, sortConfig), [data, sortConfig]);
 

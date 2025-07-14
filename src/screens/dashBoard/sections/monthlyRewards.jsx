@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { CustomSorting } from "../../../utils/customSorting";
+import { CustomSorting, CustomFiltering } from "../../../utils/customSorting";
 import CustomTable from "../../../components/customTable";
 import {
   GetYearMonthFormat,
@@ -73,12 +73,7 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
   }, [transactionInfo, groupByMonthKey]);
 
   data = useMemo(
-    () =>
-      data.filter((txn) =>
-        (txn.customerName ?? "")
-          .toLowerCase()
-          .includes(searchName.toLowerCase())
-      ),
+    () => CustomFiltering(data, "customerName", searchName),
     [data, searchName]
   );
 
@@ -118,7 +113,9 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
         Object.entries(val).map(([key, value]) => (
           <div className="row">
             <div className="col-4">{GetYearFullMonthFormat(key)}</div>
-            <div className="col-4 text-right">{value.totalPrice}</div>
+            <div className="col-4 text-right">
+              {parseFloat(value.totalPrice).toFixed(2)}
+            </div>
             <div className="col-4 text-right">{value.totalRewards}</div>
           </div>
         )),
