@@ -1,44 +1,49 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
-
-/**
- * @typedef {Object} FilterObject
- * @property {string} name
- * @property {string} value
- * @property {() => void} handleValue
- */
-
-/**
- * @typedef {Object} ColumnObject
- * @property {string | JSX.Element} name
- * @property {string} dataField
- * @property {boolean} sorting
- * @property {() => JSX.Element} [formatter]
- * @property {() => Object | null} [style]
- * @property {FilterObject} [filtering]
- */
+import { useEffect, useState, useMemo } from "react";
+import { CustomSorting } from "../utils/customSorting";
 
 /**
  *
  * @param {Object} props
- * @param {Array<ColumnObject>} props.tableHeader
- * @param {Array<import("../screens/dashBoard/sections/monthlyRewards").Transaction>} props.tableData
- * @param {import("../utils/customSorting").SortObj} props.sortConfig
- * @param {() => void} props.setSortConfig
+ * @param {
+ * Array<{
+ *  name: string | JSX.Element,
+ *  dataField: string,
+ *  sorting: boolean
+ *  formatter: () => JSX.Element
+ * }>
+ * } props.tableHeader
+ * @param {
+ *  Array<{
+ *    transactionId: string,
+ *    customerId : string,
+ *    customerName : string,
+ *    products : string,
+ *    totalPrice : string | null
+ *  }>
+ * } props.tableData
  * @returns {JSX.Element}
  */
-const CustomTable = ({ tableHeader, tableData, sortConfig, setSortConfig }) => {
+const CustomTable = ({ tableHeader, tableData }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortConfig, setSortConfig] = useState({
+    key: "customerId",
+    direction: "asc",
+  });
+
   const itemsPerPage = 5;
+  let data = tableData;
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [tableData]);
+  }, [data, sortConfig]);
 
-  const totalPages = Math.ceil(tableData.length / itemsPerPage);
+  data = useMemo(() => CustomSorting(data, sortConfig), [data, sortConfig]);
+
+  const totalPages = Math.ceil(data.length / itemsPerPage);
   const indexOfLast = currentPage * itemsPerPage;
   const indexOfFirst = indexOfLast - itemsPerPage;
-  const currentItems = tableData.slice(indexOfFirst, indexOfLast);
+  const currentItems = data.slice(indexOfFirst, indexOfLast);
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) setCurrentPage(page);
@@ -89,16 +94,6 @@ const CustomTable = ({ tableHeader, tableData, sortConfig, setSortConfig }) => {
                       </span>
                     </div>
                   )}
-                  {val.filtering && (
-                    <input
-                      type="text"
-                      className="form-control w-50 mx-auto mt-2 text-success"
-                      name={val.filtering.name}
-                      placeholder=""
-                      value={val.filtering.value}
-                      onChange={val.filtering.handleValue}
-                    />
-                  )}
                 </th>
               ))}
             </tr>
@@ -107,7 +102,7 @@ const CustomTable = ({ tableHeader, tableData, sortConfig, setSortConfig }) => {
             {currentItems.map((row, index) => (
               <tr key={index}>
                 {tableHeader.map((col) => (
-                  <td key={col.dataField} style={col.style}>
+                  <td key={col.dataField}>
                     {col.formatter
                       ? col.formatter(row[col.dataField])
                       : row[col.dataField]}
@@ -119,12 +114,12 @@ const CustomTable = ({ tableHeader, tableData, sortConfig, setSortConfig }) => {
         </table>
       </div>
       {/* Custom Pagination */}
-      {currentItems.length != 0 ? (
+      {currentItems.length !== 0 ? (
         <div className="d-flex">
           {/* Page Range */}
           <p className="my-auto">
             {indexOfFirst + 1} - {indexOfFirst + currentItems.length} of{" "}
-            {tableData.length}
+            {data.length}
           </p>
           <div className=" ml-auto my-auto">
             <button
@@ -158,9 +153,4 @@ export default CustomTable;
 CustomTable.propTypes = {
   tableHeader: PropTypes.object,
   tableData: PropTypes.object,
-  sortConfig: PropTypes.shape({
-    key: PropTypes.string,
-    direction: PropTypes.string,
-  }),
-  setSortConfig: PropTypes.func,
 };

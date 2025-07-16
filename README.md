@@ -1,4 +1,4 @@
-# React + Vite
+# React + CRA
 A **single-page** React application that simulates a **Customer Rewards** program for a retailer.
 
 # Feature
@@ -18,8 +18,7 @@ A **single-page** React application that simulates a **Customer Rewards** progra
 # Installation
 git clone https://github.com/Sriprasanth8/customer-rewards.git<br/>
 cd customer-rewards<br/>
-npm i<br/>
-npm run dev<br/>
+npm start<br/>
 
 # UI
 Build - React version(16+)<br/>
@@ -49,6 +48,7 @@ Transaction API response<br/>
 ```bash
 customer-rewards/
 ├── public/
+│   ├── index.html
 │   └── json/
 ├── src/
 │   ├── assets/
@@ -60,13 +60,11 @@ customer-rewards/
 │   ├── utils/
 │   ├── App.css
 │   ├── App.jsx
-│   └── main.jsx
-├── index.html
-├── eslint-report.json
+│   ├── index.css
+│   └── index.js
 ├── package.json
 ├── README.md
-├── Unit_Test_Script.txt
-└── vite.config.js
+└── Unit_Test_Script.txt
 ```
 
 # Author
@@ -79,8 +77,8 @@ Retailer dashboard
 Date validation
 <img src="./src/assets/uiImages/Date-validation.png"  alt="Date-validation" />
 
-Transaction table with filtering & sorting options
-<img src="./src/assets/uiImages/Datas-for-specific-timeline.png" alt="Transaction table with filtering & sorting options" />
+Transaction table with sorting options
+<img src="./src/assets/uiImages/Datas-for-specific-timeline.png" alt="Transaction table with sorting options" />
 
 Fallback UI for Error
 <img src="./src/assets/uiImages/Fallback-ui.png"  alt="Fallback UI for Error" />

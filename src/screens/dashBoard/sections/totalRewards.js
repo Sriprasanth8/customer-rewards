@@ -1,21 +1,22 @@
-import { useState, useMemo } from "react";
-import { CustomSorting, CustomFiltering } from "../../../utils/customSorting";
+import { useMemo } from "react";
 import CustomTable from "../../../components/customTable";
 import PropTypes from "prop-types";
 
 /**
  *
  * @param {Object} props
- * @param {Array<import("../screens/dashBoard/sections/monthlyRewards").Transaction>} props.transactionInfo
+ * @param {
+ *  Array<{
+ *    transactionId: string,
+ *    customerId : string,
+ *    customerName : string,
+ *    products : string,
+ *    totalPrice : string | null
+ *  }>
+ * } props.transactionInfo
  * @returns {JSX.Element}
  */
 const TotalRewards = ({ transactionInfo }) => {
-  const [searchName, setSearchName] = useState("");
-  const [sortConfig, setSortConfig] = useState({
-    key: "customerId",
-    direction: "asc",
-  });
-
   let data = useMemo(() => {
     let result = {};
 
@@ -37,17 +38,6 @@ const TotalRewards = ({ transactionInfo }) => {
     return Object.values(result);
   }, [transactionInfo]);
 
-  data = useMemo(
-    () => CustomFiltering(data, "customerName", searchName),
-    [data, searchName]
-  );
-
-  data = useMemo(() => CustomSorting(data, sortConfig), [data, sortConfig]);
-
-  const handleSearchChange = (e) => {
-    setSearchName(e.target.value);
-  };
-
   const tableHeader = [
     {
       name: "Customer Id",
@@ -58,11 +48,6 @@ const TotalRewards = ({ transactionInfo }) => {
       name: "Customer Name",
       dataField: "customerName",
       sorting: true,
-      filtering: {
-        name: "searchByName",
-        value: searchName,
-        handleValue: handleSearchChange,
-      },
     },
     {
       name: "Total Purchase",
@@ -80,12 +65,7 @@ const TotalRewards = ({ transactionInfo }) => {
   return (
     <>
       <h2 className="my-4">Total Rewards</h2>
-      <CustomTable
-        tableHeader={tableHeader}
-        tableData={data}
-        sortConfig={sortConfig}
-        setSortConfig={setSortConfig}
-      />
+      <CustomTable tableHeader={tableHeader} tableData={data} />
     </>
   );
 };

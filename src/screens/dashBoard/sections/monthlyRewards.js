@@ -1,5 +1,4 @@
-import { useState, useMemo } from "react";
-import { CustomSorting, CustomFiltering } from "../../../utils/customSorting";
+import { useMemo } from "react";
 import CustomTable from "../../../components/customTable";
 import {
   GetYearMonthFormat,
@@ -7,44 +6,39 @@ import {
 } from "../../../utils/dateFormatting";
 import PropTypes from "prop-types";
 
-const customTdStyle = {
-  maxHeight: "100px",
-  overflowX: "hidden",
-  overflowY: "auto",
-  display: "block",
-  whiteSpace: "normal",
-  margin: "0 0 .5rem 0",
-};
-
 /**
  *
  * @param {Object} props
- * @param {Array<import("../screens/dashBoard/sections/monthlyRewards").Transaction>} props.transactionInfo
+ * @param {
+ *  Array<{
+ *    transactionId: string,
+ *    customerId : string,
+ *    customerName : string,
+ *    products : string,
+ *    totalPrice : string | null
+ *  }>
+ * } props.transactionInfo
  * @param {string} props.from
  * @param {string} props.to
  * @returns {JSX.Element}
  */
 const MonthlyRewards = ({ transactionInfo, from, to }) => {
-  const [searchName, setSearchName] = useState("");
-  const [sortConfig, setSortConfig] = useState({
-    key: "customerId",
-    direction: "asc",
-  });
-
   let fromDate = new Date(from);
   let toDate = new Date(to);
+  let groupByMonthKey = {};
 
-  const groupByMonthKey = {};
-
-  for (let i = fromDate; i <= toDate; i.setMonth(i.getMonth() + 1)) {
-    const key = GetYearMonthFormat(new Date(i));
-    if (!groupByMonthKey[key]) {
-      groupByMonthKey[key] = {
-        totalPrice: 0,
-        totalRewards: 0,
-      };
+  groupByMonthKey = useMemo(() => {
+    for (let i = fromDate; i <= toDate; i.setMonth(i.getMonth() + 1)) {
+      const key = GetYearMonthFormat(new Date(i));
+      if (!groupByMonthKey[key]) {
+        groupByMonthKey[key] = {
+          totalPrice: 0,
+          totalRewards: 0,
+        };
+      }
     }
-  }
+    return groupByMonthKey;
+  }, [transactionInfo]);
 
   const deepClone = (obj) =>
     Object.fromEntries(
@@ -70,18 +64,7 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
     }
 
     return Object.values(result);
-  }, [transactionInfo, groupByMonthKey]);
-
-  data = useMemo(
-    () => CustomFiltering(data, "customerName", searchName),
-    [data, searchName]
-  );
-
-  data = useMemo(() => CustomSorting(data, sortConfig), [data, sortConfig]);
-
-  const handleSearchChange = (e) => {
-    setSearchName(e.target.value);
-  };
+  }, [transactionInfo]);
 
   const tableHeader = [
     {
@@ -93,11 +76,6 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
       name: "Customer Name",
       dataField: "customerName",
       sorting: true,
-      filtering: {
-        name: "searchByName",
-        value: searchName,
-        handleValue: handleSearchChange,
-      },
     },
     {
       name: (
@@ -108,10 +86,9 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
         </div>
       ),
       dataField: "groupByMonth",
-      style: Object.entries(groupByMonthKey).length > 3 ? customTdStyle : null,
       formatter: (val) =>
         Object.entries(val).map(([key, value]) => (
-          <div className="row">
+          <div className="row" key={key}>
             <div className="col-4">{GetYearFullMonthFormat(key)}</div>
             <div className="col-4 text-right">
               {parseFloat(value.totalPrice).toFixed(2)}
@@ -122,15 +99,60 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
     },
   ];
 
+  const monthlyTableTeader = [
+    {
+      name: "Customer Id",
+      dataField: "customerId",
+      sorting: true,
+    },
+    {
+      name: "Customer Name",
+      dataField: "customerName",
+      sorting: true,
+    },
+    {
+      name: "Total Price",
+      dataField: "totalPrice",
+      sorting: true,
+    },
+    {
+      name: "Total Rewards",
+      dataField: "totalRewards",
+      sorting: true,
+    },
+  ];
+
   return (
     <>
       <h2 className="my-4">Monthly Rewards</h2>
-      <CustomTable
-        tableHeader={tableHeader}
-        tableData={data}
-        sortConfig={sortConfig}
-        setSortConfig={setSortConfig}
-      />
+      <CustomTable tableHeader={tableHeader} tableData={data} />
+      <>
+        {Object.keys(groupByMonthKey).map((key) => {
+          let monthlyData = data.reduce((acc, cusInfo) => {
+            let cusData = { ...cusInfo, purchaseMonth: key };
+            cusData.totalPrice = cusData.groupByMonth[key].totalPrice;
+            cusData.totalRewards = cusData.groupByMonth[key].totalRewards;
+            acc.push(cusData);
+
+            return acc;
+          }, []);
+
+          return (
+            <>
+              <hr />
+              <h2 className="my-4">
+                {`${GetYearFullMonthFormat(key).split(" ")[0]} ${
+                  GetYearFullMonthFormat(key).split(" ")[1]
+                }`}
+              </h2>
+              <CustomTable
+                tableHeader={monthlyTableTeader}
+                tableData={monthlyData}
+              />
+            </>
+          );
+        })}
+      </>
     </>
   );
 };

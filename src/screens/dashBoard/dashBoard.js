@@ -18,12 +18,12 @@ const DashBoard = () => {
   let apiCallLog = useRef(0);
 
   useEffect(() => {
-    makeAPIcall();
+    makeAPIcall(fromDate, toDate);
   }, []);
 
-  const dateValidationtion = () => {
+  const dateValidationtion = (from, to) => {
     console.info("Approaching Date Validation");
-    if (new Date(fromDate) <= (toDate == "" ? new Date() : new Date(toDate))) {
+    if (new Date(from) <= (to == "" ? new Date() : new Date(to))) {
       setTimePeriodErr(undefined);
       console.info("Date Validate Successfully");
       return true;
@@ -35,27 +35,26 @@ const DashBoard = () => {
     return false;
   };
 
-  const NumberValidation = (num) => {
+  const numberValidation = (num) => {
     if (isNaN(num) || num < 0) return 0;
     return num;
   };
 
   //Api call
-  const makeAPIcall = () => {
-    if (dateValidationtion()) {
+  const makeAPIcall = async(from, to) => {
+    if (dateValidationtion(from, to)) {
       console.info("API call starts");
       setLoading(true);
-      // setTimeout(() =>
       let obj = {
-        from: fromDate,
-        to: toDate,
+        from: from,
+        to: to,
       };
-      Services.getTransactions(obj)
+      await Services.getTransactions(obj)
         .then((res) => {
           console.info("API call success");
           res.map((val) => {
             //Validating totalPrice<string> is number or not
-            val.totalPrice = parseFloat(NumberValidation(val.totalPrice));
+            val.totalPrice = parseFloat(numberValidation(val.totalPrice));
             //Calculating reward points for each transaction
             val.rewardPoints = calculateRewardPoints(val.totalPrice);
             return val;
@@ -70,11 +69,10 @@ const DashBoard = () => {
           apiCallLog.current += 1;
           setLoading(false);
           console.info("API call ends");
+          if (toDate == "") {
+            setToDate(GetYearMonthDateFormat(new Date()));
+          }
         });
-      if (toDate == "") {
-        setToDate(GetYearMonthDateFormat(new Date()));
-      }
-      // ,5000);
     }
   };
 
@@ -85,11 +83,14 @@ const DashBoard = () => {
 
   const setDate = (e) => {
     if (e.target.name == "reset") {
-      setFromDate("");
-      setToDate("");
-      setTransactionInfo([]);
+      let from = GetYearMonthDateFormat(new Date().setMonth(new Date().getMonth() - 3));
+      let to = GetYearMonthDateFormat(new Date());
+      setFromDate(from
+      );
+      setToDate(to);
       setTimePeriodErr(undefined);
       apiCallLog.current = 0;
+      makeAPIcall(from,to);
     } else if (e.target.name == "fromDate") setFromDate(e.target.value);
     else setToDate(e.target.value);
   };
@@ -101,7 +102,7 @@ const DashBoard = () => {
       </nav>
       {loading ? (
         <div className="text-center my-5">
-          <div className="spinner-border text-primary" role="status" />
+          <div className="spinner-border text-primary" />
           <p className="mt-3">Loading...</p>
         </div>
       ) : error ? (
@@ -170,7 +171,7 @@ const DashBoard = () => {
               <div className="col-12 col-md-2 d-flex">
                 <button
                   className="mt-auto mb-3 border-light bg-primary btn text-white w-100"
-                  onClick={() => makeAPIcall()}
+                  onClick={() => makeAPIcall(fromDate, toDate)}
                   disabled={fromDate == ""}
                 >
                   Filter
