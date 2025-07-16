@@ -85,6 +85,3 @@ Fallback UI for Error
 
 No data with the specific timeline
 <img src="./src/assets/uiImages/No-data.png"  alt="No-data" />
-
-Mobile Views<br/>
-<img src="./src/assets/uiImages/Mobile-view.png"  alt="Mobile view" />
