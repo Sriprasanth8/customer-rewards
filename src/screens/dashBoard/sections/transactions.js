@@ -13,7 +13,7 @@ import PropTypes from "prop-types";
  *    totalPrice : string | null
  *  }>
  * } props.transactionInfo
- * @returns {JXS.Element}
+ * @returns {JSX.Element}
  */
 const Transactions = ({ transactionInfo }) => {
   let data = transactionInfo;

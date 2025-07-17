@@ -21,11 +21,11 @@ const DashBoard = () => {
     makeAPIcall(fromDate, toDate);
   }, []);
 
-  const dateValidationtion = (from, to) => {
+  const dateValidation = (from, to) => {
     console.info("Approaching Date Validation");
     if (new Date(from) <= (to == "" ? new Date() : new Date(to))) {
       setTimePeriodErr(undefined);
-      console.info("Date Validate Successfully");
+      console.info("Date Validated Successfully");
       return true;
     }
     setTimePeriodErr("From date should not be greater than To date.");
@@ -42,7 +42,7 @@ const DashBoard = () => {
 
   //Api call
   const makeAPIcall = async(from, to) => {
-    if (dateValidationtion(from, to)) {
+    if (dateValidation(from, to)) {
       console.info("API call starts");
       setLoading(true);
       let obj = {
