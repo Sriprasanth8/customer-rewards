@@ -38,6 +38,7 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
       }
     }
     return groupByMonthKey;
+    // eslint-disable-next-line
   }, [transactionInfo]);
 
   const deepClone = (obj) =>
@@ -64,6 +65,7 @@ const MonthlyRewards = ({ transactionInfo, from, to }) => {
     }
 
     return Object.values(result);
+    // eslint-disable-next-line
   }, [transactionInfo]);
 
   const tableHeader = [

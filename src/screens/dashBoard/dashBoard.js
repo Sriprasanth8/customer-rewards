@@ -19,11 +19,12 @@ const DashBoard = () => {
 
   useEffect(() => {
     makeAPIcall(fromDate, toDate);
+    // eslint-disable-next-line
   }, []);
 
   const dateValidation = (from, to) => {
     console.info("Approaching Date Validation");
-    if (new Date(from) <= (to == "" ? new Date() : new Date(to))) {
+    if (new Date(from) <= (to === "" ? new Date() : new Date(to))) {
       setTimePeriodErr(undefined);
       console.info("Date Validated Successfully");
       return true;
@@ -69,7 +70,7 @@ const DashBoard = () => {
           apiCallLog.current += 1;
           setLoading(false);
           console.info("API call ends");
-          if (toDate == "") {
+          if (toDate === "") {
             setToDate(GetYearMonthDateFormat(new Date()));
           }
         });
@@ -82,7 +83,7 @@ const DashBoard = () => {
   );
 
   const setDate = (e) => {
-    if (e.target.name == "reset") {
+    if (e.target.name === "reset") {
       let from = GetYearMonthDateFormat(new Date().setMonth(new Date().getMonth() - 3));
       let to = GetYearMonthDateFormat(new Date());
       setFromDate(from
@@ -91,7 +92,7 @@ const DashBoard = () => {
       setTimePeriodErr(undefined);
       apiCallLog.current = 0;
       makeAPIcall(from,to);
-    } else if (e.target.name == "fromDate") setFromDate(e.target.value);
+    } else if (e.target.name === "fromDate") setFromDate(e.target.value);
     else setToDate(e.target.value);
   };
 
@@ -172,7 +173,7 @@ const DashBoard = () => {
                 <button
                   className="mt-auto mb-3 border-light bg-primary btn text-white w-100"
                   onClick={() => makeAPIcall(fromDate, toDate)}
-                  disabled={fromDate == ""}
+                  disabled={fromDate === ""}
                 >
                   Filter
                 </button>
@@ -182,7 +183,7 @@ const DashBoard = () => {
                   className="mt-auto mb-3 border-primary btn w-100"
                   name="reset"
                   onClick={(e) => setDate(e)}
-                  disabled={fromDate == "" && toDate == ""}
+                  disabled={fromDate === "" && toDate === ""}
                 >
                   Reset
                 </button>
@@ -191,7 +192,7 @@ const DashBoard = () => {
             {timePeriodErr && <p className="text-danger">{timePeriodErr}</p>}
             <hr />
           </div>
-          {transactionInfo.length != 0 ? (
+          {transactionInfo.length !== 0 ? (
             <div className="container-fluid text-center">
               <Transactions transactionInfo={transactionInfo} />
               <hr />
@@ -206,10 +207,10 @@ const DashBoard = () => {
           ) : (
             <p
               className={`text-center h5 my-5 ${
-                apiCallLog.current != 0 ? "text-danger" : "text-success"
+                apiCallLog.current !== 0 ? "text-danger" : "text-success"
               }`}
             >
-              {apiCallLog.current != 0
+              {apiCallLog.current !== 0
                 ? "No data found"
                 : "Select the time period to get data"}
             </p>
